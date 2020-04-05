@@ -9,7 +9,7 @@ module.exports = function() {
   mongoose.set('useFindAndModify', false);
 
   // Start connecting
-  mongoose.connect('mongodb://localhost/project-camdakotajosh/DB');
+  mongoose.connect('mongodb://localhost/project-camdakotajosh');
 
   // Log errors
   mongoose.connection.on('error', function(error) {
