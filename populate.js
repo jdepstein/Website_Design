@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const connect = require('./db');
+const connect = require('./setup');
 const IceCream = require('./DB/IceCream_Schema');
 const Store = require('./DB/Store_Schema');
 
