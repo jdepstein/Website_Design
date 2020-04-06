@@ -18,8 +18,8 @@ const stores = [
 
 // Reset the database
 mongoose.connection.dropDatabase()
-  .then(() => Promise.all(icecreams.map(IceCream => IceCream.save())))
-  .then(() => Promise.all(stores.map(Store => Store.save())))
+  .then(() => Promise.all(icecreams.map(icecream => icecream.save())))
+  .then(() => Promise.all(stores.map(store => store.save())))
   .then(() => mongoose.connection.close())
   .then(() => console.log('Database is ready.'))
   .catch(error => console.error(error.stack));

@@ -16,7 +16,7 @@ module.exports.retrieve = function(request, response, next) {
 
   Promise.all(queries).then(function([Store, storeIDs]) {
     if (course) {
-      response.render('stores/index', {Store: Store, storeIDs: storeIDs});
+      response.render('stores/index', {store: store, storeIDs: storeIDs});
     } else {
       next(); // No such course
     }
