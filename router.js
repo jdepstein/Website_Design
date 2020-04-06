@@ -6,11 +6,11 @@ const stores = require('./Server/stores');
 const router = express.Router();
 
 // Handle course requests
-router.get('/stores', courses.index);
-router.get('/stores/:id', courses.retrieve);
+router.get('/stores', stores.index);
+router.get('/stores/:id', stores.retrieve);
 
 // Handle section requests
-router.get('/icecreams', sections.index);
+router.get('/icecreams', icecreams.index);
 
 // Export the router
 module.exports = router;
