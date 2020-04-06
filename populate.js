@@ -6,12 +6,12 @@ const Store = require('./DB/Store_Schema');
 // Connect to the database
 connect();
 
-// Model a collection of courses
+
 const icecreams = [
 
 ];
 
-// Model a collection of sections
+
 const stores = [
 
 ];

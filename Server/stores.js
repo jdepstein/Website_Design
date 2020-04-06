@@ -1,13 +1,13 @@
-const Course = require('../DB/Store_Schema');
+const Store = require('../DB/Store_Schema');
 
-// GET /courses
+
 module.exports.index = function(request, response, next) {
-  Course.distinct('_id')
+  Store.distinct('_id')
     .then(storeIDs => response.redirect(`/stores/${storeIDs[0]}`))
     .catch(error => next(error));
 };
 
-// GET /courses/:id
+
 module.exports.retrieve = function(request, response, next) {
   const queries = [
     Store.findById(request.params.id),
@@ -15,10 +15,10 @@ module.exports.retrieve = function(request, response, next) {
   ];
 
   Promise.all(queries).then(function([Store, storeIDs]) {
-    if (course) {
+    if (store) {
       response.render('stores/index', {store: store, storeIDs: storeIDs});
     } else {
-      next(); // No such course
+      next();
     }
   }).catch(error => next(error));
 };
