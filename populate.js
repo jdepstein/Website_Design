@@ -14,7 +14,7 @@ const icecreams = [
 
 
 const stores = [
-  new Store({id: "ice_cream", City: "Chocolate_Chip", State: "NY", Street: "Vanilla Ave",Building_Number: 7, icecream:["Cookies & Cream"] })
+  new Store({_id: "ice_cream", City: "Chocolate_Chip", State: "NY", Street: "Vanilla Ave",Building_Number: 7, icecream:["Cookies & Cream"] })
 ];
 
 // Reset the database
