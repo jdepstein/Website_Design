@@ -14,7 +14,7 @@ module.exports.retrieve = function(request, response, next) {
     Store.distinct('_id')
   ];
 
-  Promise.all(queries).then(function([Store, storeIDs]) {
+  Promise.all(queries).then(function([store, storeIDs]) {
     if (store) {
       response.render('stores/index', {store: store, storeIDs: storeIDs});
     } else {
