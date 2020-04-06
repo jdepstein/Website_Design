@@ -1,4 +1,4 @@
-const Section = require('../DB/IceCream_Schema');
+const Section = require('../DB/IceCream_Sechma');
 
 // GET /sections?sort=
 module.exports.index = function(request, response, next) {
