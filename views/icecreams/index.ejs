@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <%- include('../head'); -%>
+  <body>
+    <%- include('../navbar', {active: 'icecreams'}); -%>
+    <main class="p-3">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="border-0"><a href="/icecreams" class="btn <%= (order === 'Name') ? 'btn-dark' : 'btn-primary' -%>">Course</a></th>
+          </tr>
+        </thead>
+      </table>
+    </main>
+  </body>

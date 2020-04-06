@@ -8,12 +8,13 @@ connect();
 
 
 const icecreams = [
+  new IceCream({Name: "Cookies&Cream", falvor:["Vanilla"], fillings:["Cookie bits"], description:"Creamy Vanilla Ice Cream with Home Made Cookie Bits", Price:[("Pint", 10)], Calories: 1000, Locations:["Chocolate Chip City"]})
 
 ];
 
 
 const stores = [
-
+  new Store({id: "ice_cream", City: "Chocolate_Chip", State: "NY", Street: "Vanilla Ave",Building_Number: 7, icecream:["Cookies & Cream"] })
 ];
 
 // Reset the database
