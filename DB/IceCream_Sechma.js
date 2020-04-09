@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 // Define the schema
 const IceCream = new mongoose.Schema({
   Name: String,
-  falvor: [String],
+  flavor: [String],
   fillings: [String],
   description: String,
   Price:[(String, Number)],
