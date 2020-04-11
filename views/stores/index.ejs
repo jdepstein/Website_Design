@@ -16,7 +16,9 @@
         <div class="col">
           <main class="p-3">
             <h2><%= store.id -%></h2>
-            <p><%= store.city-%></p>
+            <p><%= store.Street-%> , <%= store.Building_Number-%></p>
+            <p><%= store.City-%><%= store.State-%></p>
+
             <%_ if (store.icecream.length > 0) { -%>
               <p>Flavors:</p>
               <ul>
