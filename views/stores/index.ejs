@@ -15,19 +15,17 @@
         </div>
         <div class="col">
           <main class="p-3">
-              <%_ for (const id of storeIDs) { -%>
             <h2><%= store.id -%></h2>
             <p><%= store.Building_Number-%> <%= store.Street-%>,</p>
             <p><%= store.City-%> <%= store.State-%></p>
 
             <%_ if (store.icecream.length > 0) { -%>
-              <p>Our Falvors In </p>
+              <p>Flavors:</p>
               <ul>
                 <%_ for (const flav of store.icecream) { -%>
                   <li><a href="/stores/<%= flav -%>"><%= flav -%></a></li>
                 <%_ } -%>
               </ul>
-            <%_ } -%>
             <%_ } -%>
           </main>
         </div>
