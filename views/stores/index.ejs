@@ -4,10 +4,10 @@
   <body>
     <%- include('../navbar', {active: 'stores'}); -%>
     <div class="row container-fluid mb-5 ">
-        <div class="col-md-3">
+        <div class="col-md-5">
         </div>
 
-          <main class="col-md-3 ml-3">
+          <main class="col-md-4 ml-3">
               <%_ for (const id of storeIDs) { -%>
             <h2><%= store.id -%></h2>
             <p><%= store.Building_Number-%> <%= store.Street-%>,</p>
