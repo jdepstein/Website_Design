@@ -5,9 +5,8 @@
     <%- include('../navbar', {active: 'stores'}); -%>
     <div class="container-fluid">
       <div class="row">
-        <div class="col">
           <main class="p-3">
-              <%_ for (const id of storeIDs) { -%>
+              <%_ for (const store of store) { -%>
             <h2><%= store.id -%></h2>
             <p><%= store.Building_Number-%> <%= store.Street-%>,</p>
             <p><%= store.City-%> <%= store.State-%></p>
