@@ -7,6 +7,7 @@
       <div class="row">
         <div class="col">
           <main class="p-3">
+              <%_ for (const id of storeIDs) { -%>
             <h2><%= store.id -%></h2>
             <p><%= store.Building_Number-%> <%= store.Street-%>,</p>
             <p><%= store.City-%> <%= store.State-%></p>
@@ -18,6 +19,7 @@
                   <li><a href="/stores/<%= flav -%>"><%= flav -%></a></li>
                 <%_ } -%>
               </ul>
+            <%_ } -%>
             <%_ } -%>
           </main>
         </div>
