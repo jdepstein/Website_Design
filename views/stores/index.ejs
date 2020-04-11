@@ -16,9 +16,11 @@
         <div class="col">
           <main class="p-3">
             <h2><%= store.id -%></h2>
-            <p><%= store.city-%></p>
+            <p><%= store.Building_Number-%> <%= store.Street-%>,</p>
+            <p><%= store.City-%> <%= store.State-%></p>
+
             <%_ if (store.icecream.length > 0) { -%>
-              <p>Falvors:</p>
+              <p>Flavors:</p>
               <ul>
                 <%_ for (const flav of store.icecream) { -%>
                   <li><a href="/stores/<%= flav -%>"><%= flav -%></a></li>
