@@ -4,17 +4,20 @@
   <body>
     <%- include('../navbar', {active: 'stores'}); -%>
     <div class="container-fluid">
-      <div class="row">
+            <%_ for (const id of storeIDs) { -%>
+              <%_ const status = (id === store.id) ? 'active bg-dark' : 'inactive'; -%>
+            <%_ } -%>
+        </div>
           <main class="p-3">
-              <%_ for (const st of store) { -%>
-            <h2><%= st.id -%></h2>
-            <p><%= st.Building_Number-%> <%= st.Street-%>,</p>
-            <p><%= st.City-%> <%= st.State-%></p>
+              <%_ for (const store of store) { -%>
+            <h2><%= store.id -%></h2>
+            <p><%= store.Building_Number-%> <%= store.Street-%>,</p>
+            <p><%= store.City-%> <%= store.State-%></p>
 
-            <%_ if (st.icecream.length > 0) { -%>
+            <%_ if (store.icecream.length > 0) { -%>
               <p>Our Falvors In </p>
               <ul>
-                <%_ for (const flav of st.icecream) { -%>
+                <%_ for (const flav of store.icecream) { -%>
                   <li><a href="/stores/<%= flav -%>"><%= flav -%></a></li>
                 <%_ } -%>
               </ul>
@@ -22,7 +25,5 @@
             <%_ } -%>
           </main>
         </div>
-      </div>
-    </div>
   </body>
 </html>
