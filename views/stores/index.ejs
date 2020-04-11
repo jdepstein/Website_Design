@@ -5,22 +5,15 @@
     <%- include('../navbar', {active: 'stores'}); -%>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-auto p-3 border-right">
-          <nav class="nav nav-pills flex-column">
-            <%_ for (const id of storeIDs) { -%>
-              <%_ const status = (id === store.id) ? 'active bg-dark' : 'inactive'; -%>
-              <a href="/stores/<%= id -%>" class="nav-item nav-link <%= status -%>"><%= id -%></a>
-            <%_ } -%>
-          </nav>
-        </div>
         <div class="col">
           <main class="p-3">
+            <%_ for (const id of storeIDs) { -%>
             <h2><%= store.id -%></h2>
             <p><%= store.Building_Number-%> <%= store.Street-%>,</p>
             <p><%= store.City-%> <%= store.State-%></p>
 
             <%_ if (store.icecream.length > 0) { -%>
-              <p>Flavors:</p>
+              <p>Our Falvors In Stock</p>
               <ul>
                 <%_ for (const flav of store.icecream) { -%>
                   <li><a href="/stores/<%= flav -%>"><%= flav -%></a></li>
