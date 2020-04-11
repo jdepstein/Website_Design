@@ -4,18 +4,18 @@
   <body>
     <%- include('../navbar', {active: 'stores'}); -%>
     <div class="row container-fluid mb-5 ">
-        <div class="col-md-5">
+        <div class="col-md-4">
         </div>
 
-          <main class="col-md-4 ml-3">
+          <main class="col-md-4">
               <%_ for (const id of storeIDs) { -%>
             <h2><%= store.id -%></h2>
-            <p><%= store.Building_Number-%> <%= store.Street-%>,</p>
-            <p><%= store.City-%> <%= store.State-%></p>
+            <p class="ml-3"><%= store.Building_Number-%> <%= store.Street-%>,</p>
+            <p class="ml-3"><%= store.City-%> <%= store.State-%></p>
 
             <%_ if (store.icecream.length > 0) { -%>
-              <p>Flavors In Stock:</p>
-              <ul>
+              <p class="ml-3" >Flavors In Stock:</p>
+              <ul class="ml-3">
                 <%_ for (const flav of store.icecream) { -%>
                   <li><a href="/stores/<%= flav -%>"><%= flav -%></a></li>
                 <%_ } -%>
