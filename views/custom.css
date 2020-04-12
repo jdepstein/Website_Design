@@ -3,10 +3,10 @@
       height:40px;
   }
 
-  .icon {
+.icon {
       background: url('Sundae Fundae.jpg');
       height: 40px;
       width: 40px;
       display: block;
       /* Other styles here */
-  }
+}
