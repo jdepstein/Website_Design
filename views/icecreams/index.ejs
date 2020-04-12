@@ -14,8 +14,8 @@
               <%_ for (const icecream of icecreams) { -%>
                 <!-- <h2 class="font-weight-bold"><%= icecream.Name -%></h2>
                 <p class="font-weight-normal"><%= icecream.description-%> </p> -->
-                <%_ const status = (icecream === icecream.Name) ? 'active bg-dark' : 'inactive'; -%>
-                <a href="/icecreams/<%= icecream -%>" class="nav-item nav-link <%= status -%>"><%= icecream -%></a>
+                <%_ const status = (Name === icecream.Name) ? 'active bg-dark' : 'inactive'; -%>
+                <a href="/icecreams/<%= Name -%>" class="nav-item nav-link <%= status -%>"><%= Name -%></a>
               <%_ } -%>
 
           </nav>
