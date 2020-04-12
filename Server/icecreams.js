@@ -1,12 +1,26 @@
 const IceCream = require('../DB/IceCream_Sechma');
 
-
+// GET /courses
 module.exports.index = function(request, response, next) {
-  const order = request.query.sort || 'Name'; // Default to sort by course
-
-  IceCream.find().sort(order)
-    .then(icecreams => response.render('icecreams/index', {icecreams: icecreams, order: order}))
+  IceCream.distinct('Name')
+    .then(Names => response.redirect(`/icecreams/${Names[0]}`))
     .catch(error => next(error));
+};
+
+// GET /courses/:id
+module.exports.retrieve = function(request, response, next) {
+  const queries = [
+    Course.findById(request.params.Name),
+    Course.distinct('Name')
+  ];
+
+  Promise.all(queries).then(function([icecream, Names]) {
+    if (course) {
+      response.render('courses/index', {icecream: icecream, Names: Names});
+    } else {
+      next(); // No such course
+    }
+  }).catch(error => next(error));
 };
 
 
