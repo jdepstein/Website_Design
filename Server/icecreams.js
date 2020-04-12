@@ -21,20 +21,3 @@ module.exports.retrieve = function(request, response, next) {
     }
   }).catch(error => next(error));
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-*/
