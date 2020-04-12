@@ -25,7 +25,7 @@ const icecreams = [
 
 
 const stores = [
-  new Store({_id: "Sundae Fundae Orginal", City: "Chocolate_Chip", State: "NY", Street: "Vanilla Ave", Building_Number: 7, icecream:["Cookies & Cream", "Won't Fudge", "Sundae Funae"]}),
+  new Store({_id: "Sundae Fundae Orginal", City: "Chocolate Chip", State: "NY", Street: "Vanilla Ave", Building_Number: 7, icecream:["Cookies & Cream", "Won't Fudge", "Sundae Funae"]}),
   new Store({_id: "Fundae on Sundae", City: "Sweet", State: "MA", Street: "Sundea Ave", Building_Number: 80, icecream:["Bohemian Raspberry","Sundae Funae"] }),
   new Store({_id: "Fundae Creamery", City: "Milkshake", State: "IL", Street: "Rocky Road", Building_Number: 216, icecream:["Fairy Floss","Sundae Funae"] }),
   new Store({_id: "Sundae Fundae Jr", City: "Cherry", State: "NH", Street: "Dairy Ave", Building_Number: 305, icecream:["Skunks Treat","Sundae Funae"] }),
