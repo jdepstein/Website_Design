@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-// Define the schema
 const IceCream = new mongoose.Schema({
   Name: String,
   flavor: [String],
@@ -11,5 +10,5 @@ const IceCream = new mongoose.Schema({
   Locations:[String]
 });
 
-// Export the model
+
 module.exports = mongoose.model('IceCream', IceCream);
