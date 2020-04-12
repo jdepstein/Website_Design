@@ -7,9 +7,6 @@ const router = express.Router();
 
 
 router.get('/stores', stores.index);
-router.get('/stores', stores.retrieve);
-
-
 router.get('/icecreams', icecreams.index);
 
 // Export the router
