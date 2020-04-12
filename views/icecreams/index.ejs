@@ -3,14 +3,16 @@
   <%- include('../head'); -%>
   <body>
     <%- include('../navbar', {active: 'icecreams'}); -%>
-    <div class="container-fluid">
-        <div class="col">
-          <main class="p-3">
-            <%_ for (const icecream of icecreams) { -%>
-            <h2><%= icecream.id) -%></h2>
-            <p><%= icecream.description -%></p>
+    <div class="row container-fluid mb-5 ">
+          <div class="col-md-4">
+          </div>
+      <main class="col-md-4">
+          <%_ for (const icecream of icecreams) { -%>
+            <h2><%= icecream.name -%></h2>
+            <p ><%= icecream.description ></p>
             <%_ } -%>
-          </main>
-    </div>
+
+    </main>
+  </div>
   </body>
 </html>
