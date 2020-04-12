@@ -17,8 +17,14 @@
                 <%_ const status = (icecream === icecream.Name) ? 'active bg-dark' : 'inactive'; -%>
                 <a href="/icecreams/<%= icecream -%>" class="nav-item nav-link <%= status -%>"><%= icecream -%></a>
               <%_ } -%>
-
           </nav>
+        </div>
+        <div class="col">
+          <main class="p-3">
+            <h2><%= icecream.Name -%></h2>
+            <p><%= icecream.description -%></p>
+            
+          </main>
         </div>
       </div>
     </div>
