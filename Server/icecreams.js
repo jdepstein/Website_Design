@@ -2,7 +2,7 @@ const IceCream = require('../DB/IceCream_Sechma');
 
 
 module.exports.index = function(request, response, next) {
-  IceCream.distinct('Name')
+  IceCream.distinct('_id')
     .then(Names => response.redirect(`/icecreams/${Names[0]}`))
     .catch(error => next(error));
 };
@@ -10,7 +10,7 @@ module.exports.index = function(request, response, next) {
 module.exports.retrieve = function(request, response, next) {
   const queries = [
     IceCream.findById(request.params.id),
-    IceCream.distinct('Name')
+    IceCream.distinct('_id')
   ];
 
   Promise.all(queries).then(function([icecream, Names]) {
