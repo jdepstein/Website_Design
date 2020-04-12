@@ -7,7 +7,7 @@ const router = express.Router();
 
 
 router.get('/stores', stores.index);
-router.get('/stores/:id', stores.retrieve);
+router.get('/stores', stores.retrieve);
 
 
 router.get('/icecreams', icecreams.index);
