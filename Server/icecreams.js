@@ -1,4 +1,4 @@
-const Store = require('../DB/IceCream_Sechma');
+const IceCream = require('../DB/IceCream_Sechma');
 
 // GET /courses
 module.exports.index = function(request, response, next) {
