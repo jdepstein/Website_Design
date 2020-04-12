@@ -13,13 +13,13 @@
                 <p class="ml-3"><%= store.Building_Number-%> <%= store.Street-%>,</p>
                 <p class="ml-3"><%= store.City-%> <%= store.State-%></p>
 
-            <%_ if (store.icecream.length > 0) { -%>
-              <p class="ml-3" >Flavors In Stock:</p>
-              <ul class="ml-3">
-                <%_ for (const flav of store.icecream) { -%>
-                  <li><a href="/stores/<%= flav -%>"><%= flav -%></a></li>
-                <%_ } -%>
-              </ul>
+                <%_ if (store.icecream.length > 0) { -%>
+                  <p class="ml-3" >Flavors In Stock:</p>
+                  <ul class="ml-3">
+                    <%_ for (const flav of store.icecream) { -%>
+                      <li><a href="/stores/<%= flav -%>"><%= flav -%></a></li>
+                    <%_ } -%>
+                  </ul>
             <%_ } -%>
             <%_ } -%>
           </main>
