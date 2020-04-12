@@ -9,18 +9,17 @@
       <main class="col-md-4">
           <%_ for (const store of stores) { -%>
             <h2><%= store._id -%></h2>
-                  <p ><%= store.Building_Number-%> <%= store.Street-%></p>
-                  <p ><%= store.City-%> <%= store.State-%></p>
+            <p ><%= store.Building_Number-%> <%= store.Street-%></p>
+            <p ><%= store.City-%> <%= store.State-%></p>
 
-                  <%_ if (store.icecream.length > 0) { -%>
-                    <p >Flavors In Stock:</p>
-                    <ul>
-                      <%_ for (const flav of store.icecream) { -%>
-                        <li><a href="/stores/<%= flav -%>"><%= flav -%></a></li>
-                      <%_ } -%>
+            <%_ if (store.icecream.length > 0) { -%>
+            <p >Flavors In Stock:</p>
+            <%_ for (const flav of store.icecream) { -%>
+                  <li><a href="/stores/<%= flav -%>"><%= flav -%></a></li>
+            <%_ } -%>
 
-              <%_ } -%>
-              <%_ } -%>
+            <%_ } -%>
+            <%_ } -%>
 
     </main>
   </div>
