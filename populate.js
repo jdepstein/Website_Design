@@ -29,7 +29,7 @@ const stores = [
   new Store({_id: "Fundea on Sundea", City: "Sweet", State: "MA", Street: "Sundea Ave", Building_Number: 80, icecream:["Bohemian Raspberry","Sundea_Funea"] }),
   new Store({_id: "Fundea Creamery", City: "Milkshake", State: "IL", Street: "Rocky Road", Building_Number: 216, icecream:["Fairy Floss","Sundea_Funea"] }),
   new Store({_id: "Sundea Fundea Jr", City: "Cherry", State: "NH", Street: "Dairy Ave", Building_Number: 305, icecream:["Skunks Treat","Sundea_Funea"] }),
-  new Store({_id: "How about a Sundea", City: "Cher", State: "NH", Street: "Da", Building_Number: 3, icecream:["Vanilla Ice","Sundea_Funea"] }),
+  new Store({_id: "How about a Sundea", City: "Cherry", State: "NH", Street: "Icy Ave", Building_Number: 3, icecream:["Vanilla Ice","Sundea_Funea"] }),
   new Store({_id: "Sundea Everydea", City: "Sprinkles", State: "PA", Street: "Strawberry Lane", Building_Number: 5, icecream:["Choc It Out","Sundea_Funea"] })
 ];
 
