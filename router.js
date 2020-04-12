@@ -7,9 +7,11 @@ const router = express.Router();
 
 
 router.get('/stores', stores.index);
+
+
+// Handle course requests
 router.get('/icecreams', icecreams.index);
-
-
+router.get('/icecreams/:id', icecreams.retrieve);
 
 // Export the router
 module.exports = router;
