@@ -3,7 +3,7 @@ const Store = require('../DB/IceCream_Sechma');
 // GET /courses
 module.exports.index = function(request, response, next) {
   IceCream.distinct('Name')
-    .then(courseIDs => response.redirect(`/icecreams/${Names[0]}`))
+    .then(Names => response.redirect(`/icecreams/${Names[0]}`))
     .catch(error => next(error));
 };
 
