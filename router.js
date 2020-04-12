@@ -9,5 +9,7 @@ const router = express.Router();
 router.get('/stores', stores.index);
 router.get('/icecreams', icecreams.index);
 
+
+
 // Export the router
 module.exports = router;
