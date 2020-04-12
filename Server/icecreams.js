@@ -9,7 +9,7 @@ module.exports.index = function(request, response, next) {
 
 module.exports.retrieve = function(request, response, next) {
   const queries = [
-    IceCream.findById(request.params.Name),
+    IceCream.findById(request.params.id),
     IceCream.distinct('Name')
   ];
 
