@@ -5,8 +5,6 @@
     <%- include('../navbar', {active: 'stores'}); -%>
     <%- include('header'); -%>
     <div class="row container-fluid mb-5 ">
-          <div class="col-md-4">
-          </div>
       <main class="col-md-4">
           <%_ for (const store of stores) { -%>
             <h2><%= store._id -%></h2>
@@ -22,7 +20,7 @@
             <%_ } -%>
             <%_ } -%>
 
-    </main>
-  </div>
+      </main>
+    </div>
   </body>
 </html>
