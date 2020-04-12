@@ -21,10 +21,6 @@ const icecreams = [
   new IceCream({_id: "Won't Fudge", flavor:["Chocolate"], fillings:["Chocolate fudge"], description:"This chocolate overload Won't Fudge your chocolate cravings", Price:[("Pint", 10)], Calories: 1100, Locations:[""]}),
   new IceCream({_id: "Sundea_Funea", flavor:["Vanilla", "Choclate"], fillings:["Carmel", "fudge", "Cookie Bits", "Cherries"], description:"Name after the our store Sundea Fundea is what all other icecreams strive for", Price:[("Pint", 10)], Calories: 2500, Locations:[""]})
 
-
-
-
-
 ];
 
 
