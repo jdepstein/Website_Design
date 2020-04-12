@@ -7,3 +7,5 @@ module.exports.index = function(request, response, next) {
   Section.find().sort(order)
     .then(icecreams => response.render('icecreams/index', {icecreams: icecreams, order: order}))
     .catch(error => next(error));
+
+  };
