@@ -1,4 +1,4 @@
-const IceCream = require('../models/icecream');
+const IceCream = require('../DB/IceCream_Schema'');
 
 // GET /courses
 module.exports.index = function(request, response, next) {
