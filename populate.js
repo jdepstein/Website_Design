@@ -30,7 +30,7 @@ const stores = [
   new Store({_id: "deliciousness", City: "Sweet", State: "MA", Street: "Berry Drive", Building_Number: 80, icecream:["Bohemian Raspberry"] }),
   new Store({_id: "Sundae_Fundae", City: "Milkshake", State: "IL", Street: "Rocky Road", Building_Number: 216, icecream:["Fairy Floss"] }),
   new Store({_id: "Sundae_Funda", City: "Cherry", State: "NH", Street: "Dairy Ave", Building_Number: 305, icecream:["Skunks Treat"] }),
-  new Store({_id: "Sundae_Fund", City: "Cherry", State: "NH", Street: "Dairy Ave", Building_Number: 305, icecream:["Vanilla Ice"] }),
+  new Store({_id: "Sundae_Fund", City: "Cher", State: "NH", Street: "Da", Building_Number: 3, icecream:["Vanilla Ice"] }),
   new Store({_id: "Sundae_Funde", City: "Sprinkles", State: "PA", Street: "Strawberry Lane", Building_Number: 5, icecream:["Choc It Out"] })
 ];
 
