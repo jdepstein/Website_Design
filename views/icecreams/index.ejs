@@ -3,18 +3,24 @@
   <%- include('../head'); -%>
   <body>
     <%- include('../navbar', {active: 'icecreams'}); -%>
-    <div class="row container-fluid mb-5 ">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-auto p-3 border-right">
+    <!-- <div class="row container-fluid mb-5 ">
         <div class="col-md-4">
-        <!--  </div>
+         </div>
        <main class="col-md-4">  -->
-      <nav class="nav nav-pills flex-column">
-          <%_ for (const icecream of icecreams) { -%>
-            <h2 class="font-weight-bold"><%= icecream.Name -%></h2>
-            <p class="font-weight-normal"><%= icecream.description-%> </p>
-            <%_ } -%>
+          <nav class="nav nav-pills flex-column">
+              <%_ for (const icecream of icecreams) { -%>
+                <!-- <h2 class="font-weight-bold"><%= icecream.Name -%></h2>
+                <p class="font-weight-normal"><%= icecream.description-%> </p> -->
+                <%_ const status = (icecream === icecream.Name) ? 'active bg-dark' : 'inactive'; -%>
+                <a href="/icecreams/<%= icecream -%>" class="nav-item nav-link <%= status -%>"><%= icecream -%></a>
+              <%_ } -%>
 
-    </nav>
-  </div>
-  </div>
+          </nav>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
