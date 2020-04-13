@@ -18,6 +18,12 @@
   transform: translate(-50%, -50%);
 }
 
+.fitscreen{
+    height:10%;
+    width: 100%;
+
+}
+
 
 
 .MINT {
