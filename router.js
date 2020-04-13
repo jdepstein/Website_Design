@@ -13,5 +13,7 @@ router.get('/stores', stores.index);
 router.get('/icecreams', icecreams.index);
 router.get('/icecreams/:id', icecreams.retrieve);
 
+router.get('/aboutus', aboutus.index);
+
 // Export the router
 module.exports = router;
