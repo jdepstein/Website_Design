@@ -5,20 +5,22 @@
     <%- include('../navbar', {active: 'stores'}); -%>
     <%- include('header'); -%>
     <div class="row container-fluid mb-5 ">
-      <main class="col-md-4 border-top">
+      <main class="col-md-4">
           <%_ for (const store of stores) { -%>
+            <div class="border-bottom border-dark">
             <h2><%= store._id -%></h2>
             <p ><%= store.Building_Number-%> <%= store.Street-%></p>
             <p ><%= store.City-%> <%= store.State-%></p>
 
             <%_ if (store.icecream.length > 0) { -%>
-            <p class="border-bottom border-dark">Flavors In Stock:</p>
+            <p>Flavors In Stock:</p>
             <%_ for (const flav of store.icecream) { -%>
                   <li><a href="/icecreams/<%= flav -%>"><%= flav -%></a></li>
             <%_ } -%>
 
             <%_ } -%>
             <%_ } -%>
+          </div>
 
       </main>
     </div>
