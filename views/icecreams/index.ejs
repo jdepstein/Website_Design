@@ -8,10 +8,10 @@
       <div class="row">
         <div class="col-auto p-3 border-right">
           <nav class="nav nav-pills flex-column" >
-            <p>Our Ice Cream</p>
+            <p class="font-weight-bold">Our Ice Cream</p>
             <%_ for (const id of IceCreamNames) { -%>
               <%_ const status = (id === icecream.id) ? 'active bg-dark' : 'inactive'; -%>
-              <a href="/icecreams/<%= id -%>" class="nav-item nav-link <%= status -%>"><%= id -%></a>
+              <a href="/icecreams/<%= id -%>" class="nav-item nav-link text-dark <%= status -%>"><%= id -%></a>
             <%_ } -%>
           </nav>
         </div>
