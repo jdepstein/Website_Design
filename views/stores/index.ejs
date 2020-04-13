@@ -7,8 +7,8 @@
     <div class="row container-fluid mb-5 ">
       <main class="col-md-4">
           <%_ for (const store of stores) { -%>
-            <div class="border-bottom border-dark">
-            <h2><%= store._id -%></h2>
+
+            <h2 class="border-bottom border-dark"><%= store._id -%></h2>
             <p ><%= store.Building_Number-%> <%= store.Street-%></p>
             <p ><%= store.City-%> <%= store.State-%></p>
 
@@ -20,8 +20,7 @@
 
             <%_ } -%>
             <%_ } -%>
-          </div>
-
+    
       </main>
     </div>
   </body>
