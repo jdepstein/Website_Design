@@ -9,10 +9,10 @@
           <%_ for (const store of stores) { -%>
 
             <h2 class="border-top border-dark"><%= store._id -%></h2>
-            <p><small>
+            <address><small>
               <%= store.Building_Number-%> <%= store.Street-%><br>
               <%= store.City-%> <%= store.State-%><br>
-            </small></p>
+            </small></address>
 
             <%_ if (store.icecream.length > 0) { -%>
             <p>Flavors In Stock:</p>
