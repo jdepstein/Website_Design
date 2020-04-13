@@ -9,15 +9,15 @@
           <%_ for (const store of stores) { -%>
 
             <h2 class="border-top border-dark"><%= store._id -%></h2>
-            <address>
+            <address><small>
               <%= store.Building_Number-%> <%= store.Street-%><br>
               <%= store.City-%> <%= store.State-%><br>
-            </address>
+            </small></address>
 
             <%_ if (store.icecream.length > 0) { -%>
             <p>Flavors In Stock:</p>
             <%_ for (const flav of store.icecream) { -%>
-                  <li class="font-italic"><a class="text-secondary href="/icecreams/<%= flav -%>"><%= flav -%></a></li>
+                  <li class="font-italic"><a class="text-dark href="/icecreams/<%= flav -%>"><%= flav -%></a></li>
             <%_ } -%>
 
             <%_ } -%>
