@@ -5,7 +5,7 @@
     <%- include('../navbar', {active: 'stores'}); -%>
     <%- include('header'); -%>
     <div class="row container-fluid mb-5 ">
-      <main class="col-md-4">
+      <main class="col-md-4 border-top">
           <%_ for (const store of stores) { -%>
             <h2><%= store._id -%></h2>
             <p ><%= store.Building_Number-%> <%= store.Street-%></p>
