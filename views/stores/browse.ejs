@@ -1,0 +1,19 @@
+<table class="table">
+<thead>
+  <tr>
+    <th class="border-0"><a href="/stores" class="btn <%= (order === 'store') ? 'btn-dark' : 'btn-primary' -%>">Store</a></th>
+    <th class="border-0"><a href="/stores?sort=city" class="btn <%= (order === 'city') ? 'btn-dark' : 'btn-primary' -%>">City</a></th>
+    <!-- <th class="border-0"><a href="/stores?sort=time" class="btn <%= (order === 'time') ? 'btn-dark' : 'btn-primary' -%>">Time</a></th>
+    <th class="border-0"><a href="/stores?sort=instructor" class="btn <%= (order === 'instructor') ? 'btn-dark' : 'btn-primary' -%>">Instructor</a></th>
+    -->
+  </tr>
+</thead>
+<tbody>
+  <%_ for (const store of stores) { -%>
+    <tr>
+      <td><a href="/icecreams/<%= store.flavor -%>"><%= store.flavor -%></a></td>
+      <td><%= store.City -%></td>]
+    </tr>
+  <%_ } -%>
+</tbody>
+</table>

@@ -6,6 +6,13 @@
     <a href="/icecreams" class="nav-item nav-link <%= (active === 'icecreams') ? 'active' : 'inactive' -%>">Ice Cream</a>
     <a href="/stores" class="nav-item nav-link <%= (active === 'stores') ? 'active' : 'inactive' -%>">Stores</a>
   </nav>
+  <nav class="navbar-nav ml-auto">
+    <%_ if (admin) { -%>
+      <a href="/logout" class="nav-item nav-link">Logout</a>
+    <%_ } else { -%>
+      <a href="/login" class="nav-item nav-link">Login</a>
+    <%_ } -%>
+  </nav>
 </header>
 <script>
   const img = document.getElementById('Sundae_Fundae.jpg');

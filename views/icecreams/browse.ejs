@@ -1,0 +1,10 @@
+<h2><%= icecream.title -%></h2>
+<p><%= icecream.description -%></p>
+<%_ if (icecream.prereqs.length > 0) { -%>
+  <p>Flavors:</p>
+  <ul>
+    <%_ for (const flavor of icecream.prereqs) { -%>
+      <li><a href="/courses/<%= flavor -%>"><%= flavor -%></a></li>
+    <%_ } -%>
+  </ul>
+<%_ } -%>
