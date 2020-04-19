@@ -1,4 +1,4 @@
-const IceCream = require('../DB/IceCream_Sechma');
+const IceCream = require('../models/IceCream_Sechma');
 module.exports.index = function(request, response, next) {
   IceCream.distinct('_id')
     .then(IceCreamNames => response.redirect(`/icecreams/${IceCreamNames[0]}`))

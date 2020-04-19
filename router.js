@@ -1,6 +1,6 @@
 const express = require('express');
-const icecreams = require('./Server/icecreams');
-const stores = require('./Server/stores');
+const icecreams = require('./controllers/icecreams');
+const stores = require('./controllers/stores');
 
 // Create the router
 const router = express.Router();

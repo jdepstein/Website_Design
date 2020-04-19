@@ -1,4 +1,4 @@
-const Store = require('../DB/Store_Schema');
+const Store = require('../models/Store_Schema');
 
 
 module.exports.index = function(request, response, next) {
