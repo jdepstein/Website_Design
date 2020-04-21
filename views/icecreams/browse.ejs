@@ -4,5 +4,8 @@
 <p>Main flavor: <%= icecream.flavor -%></p>
 
 <%_ if (icecream.fillings.length > 0) { -%>
-  <p>Fillings: <%_ for (const filling of icecream.fillings) { -%> filling <%_ } -%></p>
-<%_ } -%>
+  <p>Fillings:
+  <%_ for (const fill of icecream.fillings) { -%>
+        <a href="/icecreams/<%= fill -%>"><%= fill -%></a>
+  <%_ } -%>
+<%_ } -%></p>

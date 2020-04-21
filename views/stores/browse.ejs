@@ -1,45 +1,20 @@
 <table class="table">
-<thead>
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
-  </div>
-  <!--<tr>
-    <th class="border-0"><a href="/stores" class="btn <%= (order === 'store') ? 'btn-dark' : 'btn-primary' -%>">Store</a></th>
-    <th class="border-0"><a href="/stores?sort=city" class="btn <%= (order === 'city') ? 'btn-dark' : 'btn-primary' -%>">City</a></th>
-     <th class="border-0"><a href="/stores?sort=time" class="btn <%= (order === 'time') ? 'btn-dark' : 'btn-primary' -%>">Time</a></th>
-    <th class="border-0"><a href="/stores?sort=instructor" class="btn <%= (order === 'instructor') ? 'btn-dark' : 'btn-primary' -%>">Instructor</a></th>
+  <tbody>
+    <%_ for (const store of stores) { -%>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%= store.id -%></h5>
+          <p class="card-text"><%= store.Building_Number-%> <%= store.Street-%>,</p>
+          <p class="card-text">  <%= store.City-%>, <%= store.State-%></p>
+          <a href="#" class="card-link"><%= store.flavor -%></a>
+          <%_ if (store.icecream.length > 0) { -%>
+          <p>Flavors In Stock:</p>
+          <%_ for (const flav of store.icecream) { -%>
+                <a class="card-link" href="/icecreams/<%= flav -%>"><%= flav -%></a>
+          <%_ } -%>
 
-  </tr>-->
-</thead>
-<tbody>
-  <%_ for (const store of stores) { -%>
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title"><%= store.id -%></h5>
-        <p class="card-text"><%= store.Building_Number-%> <%= store.Street-%>,</p>
-        <p class="card-text">  <%= store.City-%>, <%= store.State-%></p>
-        <a href="#" class="card-link"><%= store.flavor -%></a>
-        <%_ if (store.icecream.length > 0) { -%>
-        <p>Flavors In Stock:</p>
-        <%_ for (const flav of store.icecream) { -%>
-              <a class="card-link" href="/icecreams/<%= flav -%>"><%= flav -%></a>
-        <%_ } -%>
-
-        <%_ } -%>
+          <%_ } -%>
+        </div>
       </div>
-    </div>
-    <!--
-      <tr>
-      <td><a href="/icecreams/<%= store.flavor -%>"><%= store.flavor -%></a></td>
-      <td><%= store.City -%></td>]
-    </tr>
-    -->
-  <%_ } -%>
-</tbody>
+  </tbody>
 </table>
