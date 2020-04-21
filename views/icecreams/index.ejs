@@ -25,7 +25,7 @@
             <%_ if (admin) { -%>
               <%- include('./edit', {icecream: icecream, IceCreamIDs: IceCreamIDs}); -%>
             <%_ } else { -%>
-              <%- include('./browse', {icecream: icecream}); -%>
+              <%- include('./browse', {IceCream: IceCream}); -%>
             <%_ } -%>
             <h2><u><%= icecream._id -%></u></h2>
             <p>Description: <%= icecream.description -%></p>
