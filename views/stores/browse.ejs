@@ -9,6 +9,15 @@
       <a href="#" class="card-link">Another link</a>
     </div>
   </div>
+  <!--<tr>
+    <th class="border-0"><a href="/stores" class="btn <%= (order === 'store') ? 'btn-dark' : 'btn-primary' -%>">Store</a></th>
+    <th class="border-0"><a href="/stores?sort=city" class="btn <%= (order === 'city') ? 'btn-dark' : 'btn-primary' -%>">City</a></th>
+     <th class="border-0"><a href="/stores?sort=time" class="btn <%= (order === 'time') ? 'btn-dark' : 'btn-primary' -%>">Time</a></th>
+    <th class="border-0"><a href="/stores?sort=instructor" class="btn <%= (order === 'instructor') ? 'btn-dark' : 'btn-primary' -%>">Instructor</a></th>
+
+  </tr>-->
+</thead>
+<tbody>
   <%_ for (const store of stores) { -%>
     <div class="card" style="width: 18rem;">
       <div class="card-body">
@@ -25,6 +34,6 @@
         <%_ } -%>
       </div>
     </div>
-</thead>
 
+</tbody>
 </table>
