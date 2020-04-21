@@ -1,19 +1,8 @@
-<h2><%= icecream.title -%></h2>
-<p><%= icecream.description -%></p>
-<%_ if (icecream.flavor.length > 0) { -%>
-  <p>Flavors:</p>
-  <ul>
-    <%_ for (const flavor of icecream.flavor) { -%>
-      <li><a href="/courses/<%= flavor -%>"><%= flavor -%></a></li>
-    <%_ } -%>
-  </ul>
-<%_ } -%>
-
-
 
 <h2><u><%= icecream._id -%></u></h2>
 <p>Description: <%= icecream.description -%></p>
 <p>Main flavor: <%= icecream.flavor -%></p>
+
 <%_ if (icecream.fillings.length > 0) { -%>
-  <p>Fillings: <%_ for (const filling of icecream.fillings) { -%> filling <%_ } -%></p>
+  <p>Fillings: <%_ for (const filling of icecream.fillings) { -%> <%= icecream.filling -%> <%_ } -%></p>
 <%_ } -%>
