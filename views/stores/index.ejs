@@ -9,8 +9,26 @@
           <%_ if (admin) { -%>
             <%- include('./edit', {stores: stores}); -%>
           <%_ } else { -%>
-            <%- include('./browse', {store: store, order: order}); -%>
+            <%- include('./browse', {stores: stores, order: order}); -%>
           <%_ } -%>
+
+          <%_ for (const store of stores) { -%>
+
+            <h2 class="border-top border-dark"><%= store._id -%></h2>
+            <address><small>
+              <%= store.Building_Number-%> <%= store.Street-%><br>
+              <%= store.City-%> <%= store.State-%><br>
+            </small></address>
+
+            <%_ if (store.icecream.length > 0) { -%>
+            <p>Flavors In Stock:</p>
+            <%_ for (const flav of store.icecream) { -%>
+                  <li class="font-italic"><a class="text-dark" href="/icecreams/<%= flav -%>"><%= flav -%></a></li>
+            <%_ } -%>
+
+            <%_ } -%>
+
+            <%_ } -%>
 
 
       </main>
