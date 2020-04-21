@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const connect = require('./db');
 const IceCream = require('./models/IceCream_Sechma');
 const Store = require('./models/Store_Schema');
+const About = require('./models/About_Schema');
 
 // Connect to the database
 connect();
@@ -33,10 +34,15 @@ const stores = [
   new Store({_id: "Sundae Everydae", City: "Sprinkles", State: "PA", Street: "Strawberry Lane", Building_Number: 5, icecream:["Choc It Out","Sundae Funae"] })
 ];
 
+const stores = [
+  new About({description: "welcome to our ice cream shop!!"})
+];
+
 // Reset the database
 mongoose.connection.dropDatabase()
   .then(() => Promise.all(icecreams.map(icecream => icecream.save())))
   .then(() => Promise.all(stores.map(store => store.save())))
+  .then(() => Promise.all(aboutus.map(about => about.save())))
   .then(() => mongoose.connection.close())
   .then(() => console.log('Database is ready.'))
   .catch(error => console.error(error.stack));

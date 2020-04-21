@@ -1,11 +1,11 @@
-/*
-const Store = require('../models/Store_Schema');
+
+const Store = require('../models/About_Schema');
 
 
 module.exports.index = function(request, response, next) {
-  const order = request.query.sort || '_id';
+  const order = request.query.sort || 'descrpition';
 
-  Store.find().sort(order)
-    .then(stores => response.render('stores/index', {stores: stores, order: order}))
+  About.find().sort(order)
+    .then(aboutus => response.render('aboutus/index', {aboutus: aboutus, order: order}))
     .catch(error => next(error));
-};*/
+};
