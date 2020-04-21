@@ -8,3 +8,12 @@
     <%_ } -%>
   </ul>
 <%_ } -%>
+
+
+
+<h2><u><%= icecream._id -%></u></h2>
+<p>Description: <%= icecream.description -%></p>
+<p>Main flavor: <%= icecream.flavor -%></p>
+<%_ if (icecream.fillings.length > 0) { -%>
+  <p>Fillings: <%_ for (const filling of icecream.fillings) { -%> filling <%_ } -%></p>
+<%_ } -%>
