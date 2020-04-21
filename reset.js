@@ -34,7 +34,7 @@ const stores = [
   new Store({_id: "Sundae Everydae", City: "Sprinkles", State: "PA", Street: "Strawberry Lane", Building_Number: 5, icecream:["Choc It Out","Sundae Funae"] })
 ];
 
-const stores = [
+const aboutus = [
   new About({description: "welcome to our ice cream shop!!"})
 ];
 
