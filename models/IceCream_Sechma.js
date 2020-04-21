@@ -6,8 +6,7 @@ const IceCream = new mongoose.Schema({
   fillings: [String],
   description: String,
   Price:[(String, Number)],
-  Calories: Number,
-  Locations:[String]
+  Calories: Number
 });
 
 
