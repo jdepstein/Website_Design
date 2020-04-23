@@ -3,30 +3,30 @@
   <%- include('../head'); -%>
   <body style="background-color:#5DA1AF">
     <%- include('../navbar', {active: 'icecreams'}); -%>
-    <!--<%- include('header'); -%>-->
+
     <div class="container-fluid">
       <div class="row">
         <div class="col-auto p-3 border-right">
           <nav class="nav nav-pills flex-column" >
             <p class="font-weight-bold">Our Ice Cream</p>
-            <%_ for (const id of IceCreamNames) { -%>
+            <%_for (const id of IceCreamNames) {-%>
               <%_ const status = (id === icecream.id) ? 'active bg-light' : 'inactive'; -%>
               <a href="/icecreams/<%= id -%>" class="nav-item nav-link text-dark font-italic <%= status -%>"><%= id -%></a>
-            <%_ } -%>
+            <%_}-%>
           </nav>
-          <%_ if (admin) { -%>
+          <%_if (admin) {-%>
             <form id="create" class="form my-1">
               <input type="text" name="_id" placeholder="Icecream" size="1" class="form-control">
             </form>
-          <%_ } -%>
+          <%_}-%>
         </div>
         <div class="col text-center">
           <main class="p-3">
             <%_ if (admin) { -%>
               <%- include('./edit', {: icecream, IceCreamNames: IceCreamNames}); -%>
-            <%_ } else { -%>
+            <%_} else { -%>
               <%- include('./browse', {icecream: icecream}); -%>
-            <%_ } -%>
+            <%_} -%>
           </main>
         </div>
       </div>
