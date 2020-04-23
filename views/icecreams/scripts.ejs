@@ -21,7 +21,7 @@
   // Delete a course
   $('#delete').on('click', function(event) {
     event.preventDefault();
-    $.ajax({method: 'delete', url: '/icecreams/<%= icecreams.id -%>'})
+    $.ajax({method: 'delete', url: '/icecreams/<%= icecream.id -%>'})
       .done(() => window.location.replace('/icecreams'))
       .fail(error => alert(error.responseText));
   });
