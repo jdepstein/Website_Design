@@ -16,7 +16,28 @@ module.exports.retrieve = function(request, response, next) {
     if (icecream) {
       response.render('icecreams/index', {icecream: icecream, IceCreamNames: IceCreamNames});
     } else {
-      next(); // No such course
+      next(); 
     }
   }).catch(error => next(error));
+};
+
+// POST
+module.exports.create = function(request, response, next) {
+  IceCream.create(request.body)
+    .then(iceream => response.status(201).send(icecream.id))
+    .catch(error => next(error));
+};
+
+// DELETE
+module.exports.delete = function(request, response, next) {
+  IceCream.findByIdAndDelete(request.params.id)
+    .then(iceream => iceream ? response.status(200).end() : next())
+    .catch(error => next(error));
+};
+
+// PUT
+module.exports.update = function(request, response, next) {
+  IceCream.findByIdAndUpdate(request.params.id, request.body)
+    .then(iceream => iceream ? response.status(200).end() : next())
+    .catch(error => next(error));
 };

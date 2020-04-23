@@ -5,8 +5,7 @@ const IceCream = new mongoose.Schema({
   flavor: [String],
   fillings: [String],
   description: String,
-  Price:[(String, Number)],
-  Calories: Number
+  image: String
 });
 
 

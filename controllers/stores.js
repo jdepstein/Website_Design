@@ -8,3 +8,24 @@ module.exports.index = function(request, response, next) {
     .then(stores => response.render('stores/index', {stores: stores, order: order}))
     .catch(error => next(error));
 };
+
+// POST
+module.exports.create = function(request, response, next) {
+  Store.create(request.body)
+    .then(store => response.status(201).send(store.id))
+    .catch(error => next(error));
+};
+
+// DELETE
+module.exports.delete = function(request, response, next) {
+  Store.findByIdAndDelete(request.params.id)
+    .then(store => store ? response.status(200).end() : next())
+    .catch(error => next(error));
+};
+
+// PUT
+module.exports.update = function(request, response, next) {
+  Store.findByIdAndUpdate(request.params.id, request.body)
+    .then(store => store ? response.status(200).end() : next())
+    .catch(error => next(error));
+};
