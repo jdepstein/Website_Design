@@ -24,7 +24,8 @@
           <main class="p-3">
             <%_ if (admin) { -%>
               <%- include('./edit', {icecream: icecream, IceCreamNames: IceCreamNames}); -%>
-            <%_} else { -%>
+            <%_}
+             else { -%>
               <%- include('./browse', {icecream: icecream}); -%>
             <%_ } -%>
           </main>
