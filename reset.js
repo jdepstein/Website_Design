@@ -9,18 +9,18 @@ connect();
 
 
 const icecreams = [
-  new IceCream({_id: "Bohemian Raspberry", Name: "Bohemian Raspberry" ,flavor:["Vanilla"], fillings:["Fudge Brownies", "Raspberry"], description:"Is this the real life? Is this just fantasy?", image: ""}),
-  new IceCream({_id: "Don't Let Me Frown", Name: "Don't Let Me Frown" ,flavor:["Vanilla"], fillings:["Cookie Dough", "Chocolate Fudge", "Chocolate Chips", "Caramel"], description:"The best thing you have tasted, you will not frown.", image: ""}),
-  new IceCream({_id: "Skunks Treat", Name: "Skunks Treat", flavor:["Vanilla"], fillings:["Oreo Cookie Bits"], description:"Creamy Vanilla Ice Cream with Home Made Oreo Cookie Bits", image: ""}),
-  new IceCream({_id: "Mocha-licious", Name: "Mocha-licious", flavor:["Coffee"], fillings:[], description:"No morning coffe? Mocha-licious will wake you up!", image: ""}),
-  new IceCream({_id: "Choc It Out", Name: "Choc It Out", flavor:["Chocolate"], fillings:["Cookie Dough", "Chocolate chips"], description:"Choc It Out with some friends over our delicious dough!", image: ""}),
-  new IceCream({_id: "Vanilla Ice", Name: "Vanilla Ice",flavor:["Vanilla"], fillings:[], description:"The Best Vanilla Ice-cream you'll ever taste!", image: ""}),
-  new IceCream({_id: "Burst Your Bubble", Name: "Burst Your Bubble", flavor:["Bubble Gum"], fillings:[], description:"Try Not to Burst Your Bubble!", image: ""}),
-  new IceCream({_id: "Fairy Floss", Name: "Fairy Floss", flavor:["Cotton Candy"], fillings:["Sprinkles"], description:"Your favorite county fair treat now available 24/7", image: ""}),
-  new IceCream({_id: "sPEACHless", Name: "sPEACHless", flavor:["Peach"], fillings:[], description:"Your favorite fruit now in frozen form will leave you sPEACHless", image: ""}),
-  new IceCream({_id: "When It Rains It S'mores", Name: "When It Rains It S'mores", flavor:["Vanilla"], fillings:["Graham crackers", "Marshmallow fluff", "Chocolate fudge"], description:"Delicious campfire smore's brought to you without the fire", image: ""}),
-  new IceCream({_id: "Won't Fudge", Name: "Won't Fudge", flavor:["Chocolate"], fillings:["Chocolate Fudge"], description:"This chocolate overload won't fudge your chocolate cravings", image: ""}),
-  new IceCream({_id: "Sundae Funae", Name: "Sundae Funae", flavor:["Vanilla", "Chocolate"], fillings:["Caramel", "Chocolate Fudge", "Cookie Bits", "Cherries"], description:"Name after the our store Sundea Fundea is what all other icecreams strive for", image: ""})
+  new IceCream({_id: "Bohemian Raspberry", flavor:["Vanilla"], fillings:["Fudge Brownies", "Raspberry"], description:"Is this the real life? Is this just fantasy?", image: ""}),
+  new IceCream({_id: "Don't Let Me Frown", flavor:["Vanilla"], fillings:["Cookie Dough", "Chocolate Fudge", "Chocolate Chips", "Caramel"], description:"The best thing you have tasted, you will not frown.", image: ""}),
+  new IceCream({_id: "Skunks Treat",flavor:["Vanilla"], fillings:["Oreo Cookie Bits"], description:"Creamy Vanilla Ice Cream with Home Made Oreo Cookie Bits", image: ""}),
+  new IceCream({_id: "Mocha-licious",flavor:["Coffee"], fillings:[], description:"No morning coffe? Mocha-licious will wake you up!", image: ""}),
+  new IceCream({_id: "Choc It Out", flavor:["Chocolate"], fillings:["Cookie Dough", "Chocolate chips"], description:"Choc It Out with some friends over our delicious dough!", image: ""}),
+  new IceCream({_id: "Vanilla Ice", flavor:["Vanilla"], fillings:[], description:"The Best Vanilla Ice-cream you'll ever taste!", image: ""}),
+  new IceCream({_id: "Burst Your Bubble",   flavor:["Bubble Gum"], fillings:[], description:"Try Not to Burst Your Bubble!", image: ""}),
+  new IceCream({_id: "Fairy Floss", flavor:["Cotton Candy"], fillings:["Sprinkles"], description:"Your favorite county fair treat now available 24/7", image: ""}),
+  new IceCream({_id: "sPEACHless", flavor:["Peach"], fillings:[], description:"Your favorite fruit now in frozen form will leave you sPEACHless", image: ""}),
+  new IceCream({_id: "When It Rains It S'mores",   flavor:["Vanilla"], fillings:["Graham crackers", "Marshmallow fluff", "Chocolate fudge"], description:"Delicious campfire smore's brought to you without the fire", image: ""}),
+  new IceCream({_id: "Won't Fudge", flavor:["Chocolate"], fillings:["Chocolate Fudge"], description:"This chocolate overload won't fudge your chocolate cravings", image: ""}),
+  new IceCream({_id: "Sundae Funae", flavor:["Vanilla", "Chocolate"], fillings:["Caramel", "Chocolate Fudge", "Cookie Bits", "Cherries"], description:"Name after the our store Sundea Fundea is what all other icecreams strive for", image: ""})
 
 ];
 
