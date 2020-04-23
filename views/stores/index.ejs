@@ -5,18 +5,19 @@
     <%- include('../navbar', {active: 'stores'}); -%>
     <main>
         <%_ for (const store of stores) { -%>
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title"><%= store.id -%></h5>
-        <p class="card-text"><%= store.Building_Number-%> <%= store.Street-%>,</p>
-        <p class="card-text">  <%= store.City-%>, <%= store.State-%></p>
-        <a href="#" class="card-link"><%= store.flavor -%></a>
-        <%_ if (store.icecream.length > 0) { -%>
-        <p>Flavors In Stock:</p>
-        <%_ for (const flav of store.icecream) { -%>
-              <a class="card-link" href="/icecreams/<%= flav -%>"><%= flav -%></a>
-        <%_ } -%>
-        <%_ } -%>
+            <div class="card col-md-4 ml-3" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title"><%= store.id -%></h5>
+                <p class="card-text"><%= store.Building_Number-%> <%= store.Street-%>,</p>
+                <p class="card-text">  <%= store.City-%>, <%= store.State-%></p>
+                <a href="#" class="card-link"><%= store.flavor -%></a>
+                <%_ if (store.icecream.length > 0) { -%>
+                  <p>Flavors In Stock:</p>
+                  <%_ for (const flav of store.icecream) { -%>
+                    <a class="card-link" href="/icecreams/<%= flav -%>"><%= flav -%></a>
+                    <%_ } -%>
+                  <%_ } -%>
+
       </div>
     </div>
     <%_ } -%>
