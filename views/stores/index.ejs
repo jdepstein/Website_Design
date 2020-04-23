@@ -6,14 +6,6 @@
     <!--<%- include('header'); -%>-->
     <div class="row container-fluid mb-5 ">
       <main class="col-md-4">
-          <%_ if (admin) { -%>
-            <%- include('./edit', {stores: stores}); -%>
-          <%_ } else { -%>
-            <%- include('./browse', {stores: stores, order: order}); -%>
-          <%_ } -%>
-
-          <%_ for (const store of stores) { -%>
-
             <h2 class="border-top border-dark"><%= store._id -%></h2>
             <address><small>
               <%= store.Building_Number-%> <%= store.Street-%><br>
@@ -33,8 +25,6 @@
 
       </main>
     </div>
-    <%_ if (admin) { -%>
-      <%- include('./scripts'); -%>
-    <%_ } -%>
+
   </body>
 </html>

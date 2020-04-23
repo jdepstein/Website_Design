@@ -20,24 +20,3 @@ module.exports.retrieve = function(request, response, next) {
     }
   }).catch(error => next(error));
 };
-
-// POST /icecreams (with the new ice cream in the request body)
-module.exports.create = function(request, response, next) {
-  IceCream.create(request.body)
-    .then(icecream => response.status(201).send(icecream.id))
-    .catch(error => next(error));
-};
-
-// DELETE /icecreams/:id
-module.exports.delete = function(request, response, next) {
-  IceCream.findByIdAndDelete(request.params.id)
-    .then(icecream => icecream ? response.status(200).end() : next())
-    .catch(error => next(error));
-};
-
-// PUT /icecreams/:id (with the changes in the request body)
-module.exports.update = function(request, response, next) {
-  IceCream.findByIdAndUpdate(request.params.id, request.body)
-    .then(icecream => icecream ? response.status(200).end() : next())
-    .catch(error => next(error));
-};

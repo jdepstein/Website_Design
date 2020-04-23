@@ -14,26 +14,13 @@
               <a href="/icecreams/<%= id -%>" class="nav-item nav-link text-dark font-italic <%= status -%>"><%= id -%></a>
             <%_ } -%>
           </nav>
-          <%_ if (admin) { -%>
-            <form id="create" class="form my-1">
-              <input type="text" name="_id" placeholder="CS###" size="1" class="form-control">
-            </form>
-          <%_ } -%>
         </div>
         <div class="col text-center">
           <main class="p-3">
-            <%_ if (admin) { -%>
-              <%- include('./edit', {icecream: icecream, IceCreamIDs: IceCreamIDs}); -%>
-            <%_ } else { -%>
-              <%- include('./browse', {icecream: icecream}); -%>
-            <%_ } -%>
-            
+
           </main>
         </div>
       </div>
     </div>
-    <%_ if (admin) { -%>
-    <%- include('./scripts', {icecream: icecream}); -%>
-    <%_ } -%>
   </body>
 </html>
