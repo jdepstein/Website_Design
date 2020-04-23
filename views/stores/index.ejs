@@ -7,18 +7,21 @@
     <div class="row container-fluid mb-5 ">
       <main class="col-md-4">
         <%_ for (const store of stores) { -%>
-            <h2 class="border-top border-dark"><%= store._id -%></h2>
-              <address><small>
-                  <%= store.Building_Number-%> <%= store.Street-%><br>
-                  <%= store.City-%> <%= store.State-%><br>
-                </small></address>
-                <%_ if (store.icecream.length > 0) { -%>
-                  <p>Flavors In Stock:</p>
-                  <%_ for (const flav of store.icecream) { -%>
-                    <li class="font-italic"><a class="text-dark" href="/icecreams/<%= flav -%>"><%= flav -%></a></li>
-     <%_ } -%>
-     <%_ } -%>
-     <%_ } -%>
+
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%= store.id -%></h5>
+        <p class="card-text"><%= store.Building_Number-%> <%= store.Street-%>,</p>
+        <p class="card-text">  <%= store.City-%>, <%= store.State-%></p>
+        <a href="#" class="card-link"><%= store.flavor -%></a>
+        <%_ if (store.icecream.length > 0) { -%>
+        <p>Flavors In Stock:</p>
+        <%_ for (const flav of store.icecream) { -%>
+              <a class="card-link" href="/icecreams/<%= flav -%>"><%= flav -%></a>
+        <%_ } -%>
+        <%_ } -%>
+      </div>
+    </div>
 
 
       </main>
