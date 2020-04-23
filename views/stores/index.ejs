@@ -3,9 +3,7 @@
   <%- include('../head'); -%>
   <body style="background-color:#5DA1AF">
     <%- include('../navbar', {active: 'stores'}); -%>
-    <!--<%- include('header'); -%>-->
-    <div>
-      <main>
+    <main>
         <%_ for (const store of stores) { -%>
     <div class="card" style="width: 18rem;">
       <div class="card-body">
@@ -22,10 +20,7 @@
         <%_ } -%>
       </div>
     </div>
-
-
-      </main>
-    </div>
+  </main>
 
   </body>
 </html>
