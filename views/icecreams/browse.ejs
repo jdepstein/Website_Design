@@ -1,11 +1,13 @@
 
-<h2><u><%= icecream._id -%></u></h2>
+<h2><%= icecream._id -%></h2>
 <p>Description: <%= icecream.description -%></p>
 <p>Main flavor: <%= icecream.flavor -%></p>
 
 <%_ if (icecream.fillings.length > 0) { -%>
   <p>Fillings:
+    <ul>
   <%_ for (const fill of icecream.fillings) { -%>
-        <a href="/icecreams/<%= fill -%>"><%= fill -%></a>
+        <li><a><%= fill -%></a></li>
   <%_ } -%>
+  </ul>
 <%_ } -%></p>
