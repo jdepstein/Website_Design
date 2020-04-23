@@ -14,11 +14,11 @@
   $('#update').on('submit', function(event) {
     const form = $(this);
     event.preventDefault();
-    $.ajax({method: 'put', url: '/icecreams/<%= icecream.id -%>', data: form.serialize()})
+    $.ajax({method: 'put', url: '/icecreams/<%= form.input -%>', data: form.serialize()})
       .fail(error => alert(error.responseText));
   });
 
-  
+
   $('#delete').on('click', function(event) {
     event.preventDefault();
     $.ajax({method: 'delete', url: '/icecreams/<%= icecream.id -%>'})
