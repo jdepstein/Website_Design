@@ -23,9 +23,10 @@
         <div class="col text-center">
           <main class="p-3">
             <%_ if (admin) { -%>
-              <%- include('./edit', {: icecream, IceCreamNames: IceCreamNames}); -%>
-            <%_} else { -%>
-              <%- include('./browse', {icecream: icecream}); -%>
+              <%- include('./views/icecreams/edit.ejs', {: icecream, IceCreamNames: IceCreamNames}); -%>
+            <%_}
+            else { -%>
+              <%- include('./views/icecreams/browse.ejs', {icecream: icecream}); -%>
             <%_} -%>
           </main>
         </div>
