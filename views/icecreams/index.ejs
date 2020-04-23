@@ -20,10 +20,10 @@
             </form>
           <%_}-%>
         </div>
-        <div class="col text-center">
+        <div class="col">
           <main class="p-3">
             <%_ if (admin) { -%>
-              <%- include('./edit', {: icecream, IceCreamNames: IceCreamNames}); -%>
+              <%- include('./edit', {icecream: icecream, IceCreamNames: IceCreamNames}); -%>
             <%_} else { -%>
               <%- include('./browse', {icecream: icecream}); -%>
             <%_ } -%>
