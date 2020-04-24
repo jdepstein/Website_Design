@@ -1,6 +1,9 @@
 <form id="update" class="form">
+  <h6>Description</h6>
   <textarea name="description" placeholder="Description" rows="3" class="form-control mb-1"><%= icecream.description -%></textarea>
+  <h6>Flavors</h6>
   <input type="text" name="flavors" placeholder="<%= icecream.flavor -%>" value="<%= icecream.flavor -%>" class="form-control form-control-lg font-weight-bold mb-1">
+    <h6>Fillings</h6>
    <%_ for (filling of icecream.fillings) { -%>
      <input type="text" name="flavors" placeholder="<%= filling -%>" value="<%= filling -%>" class="form-control form-control-lg font-weight-bold mb-1">
    <%_ } -%>
