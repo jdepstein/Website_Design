@@ -20,12 +20,13 @@
 
   $('#delete').on('click', function(event) {
     event.preventDefault();
+    console.log("HELLO");
     $.ajax({method: 'delete', url: '/stores'})
       .done(() => window.location.replace('/stores'))
       .fail(error => alert(error.responseText));
   });
 
-  $('#add_filling').on('click','button', function(event){
+  $('#add_filling').on('click', function(event){
       event.preventDefault();
       console.log("HELLO");
       $('#Fillings').append('<div class="Filling_group"><input type="text" name="flavors" placeholder="" value="" class="form-control form-control-lg font-weight-bold mb-1"></div>')
