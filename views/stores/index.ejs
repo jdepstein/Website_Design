@@ -22,11 +22,12 @@
                     <a class="card-link" href="/icecreams/<%= flav -%>"><%= flav -%></a>
                     <%_ } -%>
                   <%_ } -%>
-                <%x += 1; %>
+                <% var x += 1; %>
       </div>
     </div>
     <%_ if (x === 3) { -%>
             </div>
+            <% var x = 0; %>
             <%_ } -%>
     <%_ } -%>
     </div>
