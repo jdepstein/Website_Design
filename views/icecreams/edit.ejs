@@ -2,7 +2,7 @@
   <h6>Description</h6>
   <textarea name="description" placeholder="Description" rows="3" class="form-control mb-1"><%= icecream.description -%></textarea>
   <h6>Flavors</h6>
-  <%_ for (falvor of icecream.flavors) { -%>
+  <%_ for (falvor of icecream.flavor) { -%>
   <input type="text" name="flavors" placeholder="<%= falvor -%>" value="<%= falvor -%>" class="form-control form-control-lg font-weight-bold mb-1">
   <%_ } -%>
     <div id="Fillings">
