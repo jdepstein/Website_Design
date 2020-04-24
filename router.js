@@ -33,7 +33,6 @@ router.put('/icecreams/:id', authorize, icecreams.update);
 
 
 
-
 router.get('/aboutus', aboutus.index);
 
 
