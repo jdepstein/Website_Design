@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const connect = require('./db');
 const IceCream = require('./models/IceCream_Sechma');
 const Store = require('./models/Store_Schema');
-const About = require('./models/About_Schema');
 
 // Connect to the database
 connect();
@@ -39,7 +38,6 @@ const stores = [
 mongoose.connection.dropDatabase()
   .then(() => Promise.all(icecreams.map(icecream => icecream.save())))
   .then(() => Promise.all(stores.map(store => store.save())))
-  .then(() => Promise.all(aboutus.map(about => about.save())))
   .then(() => mongoose.connection.close())
   .then(() => console.log('Database is ready.'))
   .catch(error => console.error(error.stack));
