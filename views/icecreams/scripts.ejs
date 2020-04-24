@@ -14,7 +14,7 @@
   $('#update').on('submit', function(event) {
     const form = $(this);
     event.preventDefault();
-    $.ajax({method: 'put', url: '/icecreams/<%= icecream._id -%>', data: form.serialize()})
+    $.ajax({method: 'put', url: '/icecreams/<%= icecream.id -%>', data: form.serialize()})
       .fail(error => alert(error.responseText));
   });
 
