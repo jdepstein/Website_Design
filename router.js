@@ -30,7 +30,7 @@ router.post('/icecreams', authorize, icecreams.create);
 router.delete('/icecreams/:id', authorize, icecreams.delete);
 router.put('/icecreams/:id', authorize, icecreams.update);
 
-
+router.get('views', views.index);
 
 //router.get('/aboutus', aboutus.index);
 
