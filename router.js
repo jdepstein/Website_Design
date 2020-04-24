@@ -33,11 +33,9 @@ router.put('/icecreams/:id', authorize, icecreams.update);
 
 
 
-// Handle store requests
-//router.get('/aboutus', aboutus.index);
-//router.post('/aboutus', authorize, aboutus.create);
-//router.delete('/aboutus/:id', authorize, aboutus.delete);
-//router.put('/aboutus/:id', authorize, aboutus.update);
+
+router.get('/aboutus', aboutus.index);
+
 
 // Export the router
 module.exports = router;
