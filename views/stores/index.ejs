@@ -4,7 +4,7 @@
   <body style="background-color:#5DA1AF">
     <%- include('../navbar', {active: 'stores'}); -%>
     <main>
-        <%= const x = 0 %>
+        const x = 0
         <%_ for (const store of stores) { -%>
           <%_ if (store.icecream.length === 0) { -%>
               <div class="row">
@@ -22,10 +22,10 @@
                     <a class="card-link" href="/icecreams/<%= flav -%>"><%= flav -%></a>
                     <%_ } -%>
                   <%_ } -%>
-                  <%= x += 1 %>
+                  x += 1
       </div>
     </div>
-    <%_ if (store.icecream.length === 3) { -%>
+    <%_ if (x === 3) { -%>
             </div>
             <%_ } -%>
     <%_ } -%>
