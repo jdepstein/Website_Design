@@ -14,13 +14,13 @@
   $('#update').on('submit', function(event) {
     const form = $(this);
     event.preventDefault();
+    console.log("HELLO");
     $.ajax({method: 'put', url: '/stores', data: form.serialize()})
       .fail(error => alert(error.responseText));
   });
 
   $('#delete').on('click', function(event) {
     event.preventDefault();
-    console.log("HELLO");
     $.ajax({method: 'delete', url: '/stores'})
       .done(() => window.location.replace('/stores'))
       .fail(error => alert(error.responseText));
