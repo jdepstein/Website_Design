@@ -1,7 +1,11 @@
 <form id="update" class="form">
   <textarea name="description" placeholder="Description" rows="3" class="form-control mb-1"><%= icecream.description -%></textarea>
   <input type="text" name="flavors" placeholder="<%= icecream.flavor -%>" value="<%= icecream.flavor -%>" class="form-control form-control-lg font-weight-bold mb-1">
-  <input type="text" name="fillings" placeholder="<%= icecream.fillings -%>" value="<%= icecream.fillings  -%>" class="form-control form-control-lg font-weight-bold mb-1">
+  <select multiple name="fillings" size="<%= icecream.fillings.length -%>" class="form-control w-auto mb-1">
+   <%_ for (filling id of icecream.filling) { -%>
+     <input type="text" name="flavors" placeholder="<%= filling -%>" value="<%= filling -%>" class="form-control form-control-lg font-weight-bold mb-1">
+   <%_ } -%>
+ </select>
   <button type="submit" class="btn btn-primary">Save</button>
   <button id="delete" class="btn btn-primary">Delete</button>
 </form>
