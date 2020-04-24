@@ -6,7 +6,7 @@
     <main>
         <% var x = 0; %>
         <%_ for (const store of stores) { -%>
-          <%_ if (store.icecream.length === 0) { -%>
+          <%_ if (x === 0) { -%>
               <div class="row">
             <%_ } -%>
             <div class="card ml-3" style="width: 18rem;">
