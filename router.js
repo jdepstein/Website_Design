@@ -34,7 +34,7 @@ router.put('/icecreams/:id', authorize, icecreams.update);
 
 
 
-router.get('/aboutus', aboutus.index);
+//router.get('/aboutus', aboutus.index);
 
 
 // Export the router
