@@ -30,7 +30,7 @@
       .done(() => window.location.replace('/stores'))
       .fail(error => alert(error.responseText));
   });
-  $('#stores').on('click','button', function(event){
+  $('.delete_store').on('click','button', function(event){
       $(this).closest('main').remove();
     });
 
