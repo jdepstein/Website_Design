@@ -18,6 +18,12 @@
       .fail(error => alert(error.responseText));
   });
 
+  $('.add_flavor').on('click', function(event){
+      event.preventDefault();
+      $(this).closest('div').append('<input type="text" name="" value="">');
+
+  });
+
   $('#delete').on('click', function(event) {
     event.preventDefault();
     $.ajax({method: 'delete', url: '/stores'})

@@ -23,8 +23,9 @@
           <button class="bg-warning mb-3">Delete Store</button>
           <% x++; %>
 
-  </div>
-  </div>
+        </div>
+    </div>
+
   </main>
   <%_ if (x === 4) { -%>
       </div>
@@ -32,4 +33,20 @@
       <%_ } -%>
   <%_ } -%>
   </div>
+  <main>
+    <div class="card ml-3 mt-3 mb-3" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%= store.id -%></h5>
+        <p class="card-text"><%= store.Building_Number-%> <%= store.Street-%>,</p>
+        <p class="card-text">  <%= store.City-%>, <%= store.State-%></p>
+        <a href="#" class="card-link"><%= store.flavor -%></a>
+        <div>
+          <button  type="button" class="btn btn-primary mb-2 add_flavor">Add Flavor</button>
+        </div>
+        <button class="bg-warning mb-3">Delete Store</button>
+        <% x++; %>
+
+      </div>
+    </div>
+  </main>
 </form>
