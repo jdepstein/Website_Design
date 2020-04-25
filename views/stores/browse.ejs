@@ -12,9 +12,11 @@
 
         <%_ if (store.icecream.length > 0) { -%>
           <p>Flavors In Stock:</p>
+          <ul>
           <%_ for (const flav of store.icecream) { -%>
-            <a class="card-link" href="/icecreams/<%= flav -%>"><%= flav -%></a>
+            <li><a class="card-link" href="/icecreams/<%= flav -%>"><%= flav -%></a></li>
             <%_ } -%>
+          </ul>
           <%_ } -%>
         <% x++; %>
 </div>
