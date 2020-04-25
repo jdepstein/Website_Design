@@ -28,13 +28,21 @@
 
   $('#add_filling').on('click', function(event){
       event.preventDefault();
-      $('#Fillings').append('<div><input type="text" name="flavors" placeholder="" value="" class="form-control form-control-lg font-weight-bold mb-1"> <button class="bg-warning mb-3">Delete Filling</button> </div>')
+      $('#Fillings').append('<div><input type="text" name="fillings" placeholder="" value="" class="form-control form-control-lg font-weight-bold mb-1"> <button class="bg-warning mb-3">Delete Filling</button> </div>')
   });
 
   $('#Fillings').on('click','button', function(event){
-      console.log("I was clicked");
       $(this).closest('div').remove();
     });
+
+    $('#add_flavor').on('click', function(event){
+        event.preventDefault();
+        $('#Flavors').append('<div><input type="text" name="flavors" placeholder="" value="" class="form-control form-control-lg font-weight-bold mb-1"> <button class="bg-warning mb-3">Delete Falvor</button> </div>')
+    });
+
+    $('#Flavors').on('click','button', function(event){
+        $(this).closest('div').remove();
+      });
 
 
 </script>

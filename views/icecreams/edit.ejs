@@ -1,22 +1,29 @@
 <form id="update" class="form">
-  <h6>Description</h6>
+
+  <h4>Description</h4>
   <textarea name="description" placeholder="Description" rows="3" class="form-control mb-1"><%= icecream.description -%></textarea>
-  <h6>Flavors</h6>
 
+  <h4>Flavors</h4>
+  <button id="add_flavor" type="button" class="btn btn-primary mb-2">Add Filling</button>
+  <div id="Flavors">
     <%_ for (falvor of icecream.flavor) { -%>
-      <input type="text" name="flavors" placeholder="<%= falvor -%>" value="<%= falvor -%>" class="form-control form-control-lg font-weight-bold mb-1">
+      <div>
+        <input type="text" name="flavors" placeholder="<%= falvor -%>" value="<%= falvor -%>" class="form-control form-control-lg font-weight-bold mb-1">
+        <button class="bg-warning mb-3">Delete Flavor</button>
+      </div>
     <%_ } -%>
+  </div>
 
-    <h6 class="mt-2 mb-2">Fillings</h6>
+
+    <h4 class="mt-2 mb-2">Fillings</h4>
     <button id="add_filling" type="button" class="btn btn-primary mb-2">Add Filling</button>
     <div id="Fillings">
         <%_ for (filling of icecream.fillings) { -%>
             <div>
-                <input type="text" name="flavors" placeholder="<%= filling -%>" value="<%= filling -%>" class="form-control form-control-lg font-weight-bold mb-1">
+                <input type="text" name="fillings" placeholder="<%= filling -%>" value="<%= filling -%>" class="form-control form-control-lg font-weight-bold mb-1">
                 <button class="bg-warning mb-3">Delete Filling</button>
             </div>
         <%_ } -%>
-
    </div>
 
   <button type="submit" class="btn btn-primary">Save</button>
