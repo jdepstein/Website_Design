@@ -15,8 +15,12 @@
           <%_ if (store.icecream.length > 0) { -%>
             <p>Flavors In Stock:</p>
             <ul>
+            <button  type="button" class="btn btn-primary mt-2 mb-2 add_flavor">Add Flavor</button>
             <%_ for (const flav of store.icecream) { -%>
-              <li><a class="card-link" href="/icecreams/<%= flav -%>"><%= flav -%></a></li>
+              <li>
+                    <a class="card-link" href="/icecreams/<%= flav -%>"><%= flav -%></a>
+                    <button class="bg-warning mb-3 delete_flavor">Delete Flavor</button>
+              </li>
               <%_ } -%>
             </ul>
             <%_ } -%>
