@@ -5,8 +5,7 @@
         <div class="row">
       <%_ } -%>
 
-      <div class="card ml-3 mt-3 mb-3" style="width: 18rem;">
-        <div class="card-body">
+      <div class="card ml-3 mt-3 mb-3 card-body" style="width: 18rem;">
           <h5 class="card-title"><%= store.id -%></h5>
           <p class="card-text"><%= store.Building_Number-%> <%= store.Street-%>,</p>
           <p class="card-text">  <%= store.City-%>, <%= store.State-%></p>
@@ -20,7 +19,6 @@
           <button class="bg-warning mb-3">Delete Store</button>
           <% x++; %>
 
-  </div>
   </div>
   <%_ if (x === 4) { -%>
       </div>
