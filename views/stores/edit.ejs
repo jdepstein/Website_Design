@@ -1,13 +1,10 @@
 <form id="update" class="form">
 
   <% var x = 0; %>
-
   <%_ for (const store of stores) { -%>
     <%_ if (x === 0) { -%>
-        <div clas
-        s="row">
+        <div class="row">
       <%_ } -%>
-      <main>
       <div class="card ml-3 mt-3 mb-3" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title"><%= store.id -%></h5>
@@ -17,24 +14,15 @@
 
           <%_ if (store.icecream.length > 0) { -%>
             <p>Flavors In Stock:</p>
-            <ul class="flavs">
-            <button  type="button" class="btn btn-primary mt-2 mb-2 add_flavor">Add Flavor</button>
-
+            <ul>
             <%_ for (const flav of store.icecream) { -%>
-              <li>
-                <a class="card-link" href="/icecreams/<%= flav -%>"><%= flav -%></a>
-                <button class="bg-warning mb-3">Delete Flavor</button>
-              </li>
+              <li><a class="card-link" href="/icecreams/<%= flav -%>"><%= flav -%></a></li>
               <%_ } -%>
             </ul>
-
             <%_ } -%>
-            <button class="bg-warning mb-3 delete_store">Delete Store</button>
-      <% x++; %>
-      </div>
-    </div>
-  </main>
-
+          <% x++; %>
+  </div>
+  </div>
   <%_ if (x === 4) { -%>
       </div>
       <% var x = 0; %>
