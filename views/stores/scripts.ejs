@@ -35,7 +35,12 @@
 
   $('.delete_flav').on('click', function(event) {
     event.preventDefault();
-    console.log("PRINT");
+    $(this).closest('div').remove();
+
+  });
+
+  $('.delete_store').on('click', function(event) {
+    event.preventDefault();
     $(this).closest('div').remove();
 
   });
