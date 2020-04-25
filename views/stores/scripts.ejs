@@ -30,12 +30,6 @@
 
   });
 
-  $('#delete').on('click', function(event) {
-    event.preventDefault();
-    $.ajax({method: 'delete', url: '/stores'})
-      .done(() => window.location.replace('/stores'))
-      .fail(error => alert(error.responseText));
-  });
   $('.delete_store').on('click','button', function(event){
       $(this).closest('main').remove();
     });

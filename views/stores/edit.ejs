@@ -1,9 +1,11 @@
 <form id="update" class="form">
-  <div id="stores">
+
   <% var x = 0; %>
+
   <%_ for (const store of stores) { -%>
     <%_ if (x === 0) { -%>
-        <div class="row">
+        <div clas
+        s="row">
       <%_ } -%>
       <main>
       <div class="card ml-3 mt-3 mb-3" style="width: 18rem;">
@@ -25,7 +27,7 @@
               </li>
               <%_ } -%>
             </ul>
-            
+
             <%_ } -%>
             <button class="bg-warning mb-3 delete_store">Delete Store</button>
       <% x++; %>
@@ -39,7 +41,6 @@
       <%_ } -%>
   <%_ } -%>
 
-  </div>
   <main>
     <div class="card ml-3 mt-3 mb-3" style="width: 18rem;">
       <div class="card-body">
