@@ -2,7 +2,6 @@
 <script>
 
 
-
   $('#create').on('submit', function(event) {
     const form = $(this);
     event.preventDefault();
@@ -18,21 +17,25 @@
       .fail(error => alert(error.responseText));
   });
 
-  $('.add_flavor').on('click', function(event){
-      event.preventDefault();
-      $(this).closest('ul').append('<li><input type="text" name="flavor" value=""><button class="bg-warning mb-3">Delete Flavor</button></li>');
+  $('#delete').on('click', function(event) {
+    event.preventDefault();
+    $.ajax({method: 'delete', url: '/stores'})
+      .done(() => window.location.replace('/stores'))
+      .fail(error => alert(error.responseText));
+  });
+
+  $('.add_flavor').on('click', function(event) {
+    event.preventDefault();
+    $(this).closest('ul').append(`
+    <div>
+      <li><input type="text" name="falvor" placeholder="chocolate" value=""></li>
+      <button class="bg-warning mb-3">Delete Flavor</button>
+    </div>`)
+
 
   });
 
-  $('.flavs').on('click', function(event){
-      event.preventDefault();
-      $(this).closest('li').remove()
 
-  });
-
-  $('.delete_store').on('click','button', function(event){
-      $(this).closest('main').remove();
-    });
 
 
 </script>
