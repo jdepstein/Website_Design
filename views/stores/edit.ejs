@@ -1,4 +1,29 @@
 <form id="update" class="form">
-  <button class="btn btn-primary">Save</button>
-  <button id="delete" class="btn btn-primary">Delete</button>
+  <% var x = 0; %>
+  <%_ for (const store of stores) { -%>
+    <%_ if (x === 0) { -%>
+        <div class="row">
+      <%_ } -%>
+
+      <div class="card ml-3 mt-3 mb-3" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%= store.id -%></h5>
+          <p class="card-text"><%= store.Building_Number-%> <%= store.Street-%>,</p>
+          <p class="card-text">  <%= store.City-%>, <%= store.State-%></p>
+          <a href="#" class="card-link"><%= store.flavor -%></a>
+          <button class="bg-warning mb-3">Delete Store</button>
+          <%_ if (store.icecream.length > 0) { -%>
+            <p>Flavors In Stock:</p>
+            <%_ for (const flav of store.icecream) { -%>
+              <a class="card-link" href="/icecreams/<%= flav -%>"><%= flav -%></a>
+              <%_ } -%>
+            <%_ } -%>
+          <% x++; %>
+  </div>
+  </div>
+  <%_ if (x === 4) { -%>
+      </div>
+      <% var x = 0; %>
+      <%_ } -%>
+  <%_ } -%>
 </form>
