@@ -8,13 +8,13 @@
     <%_ } -%>
 
     <div id="Fillings">
-
       <h6>Fillings</h6>
-
       <button id="add_filling" type="button" class="btn btn-primary">Add Filling</button>
-
         <%_ for (filling of icecream.fillings) { -%>
-          <div class="Filling_group"><input type="text" name="flavors" placeholder="<%= filling -%>" value="<%= filling -%>" class="form-control form-control-lg font-weight-bold mb-1"></div>
+            <div class="filling_type">
+                <input type="text" name="flavors" placeholder="<%= filling -%>" value="<%= filling -%>" class="form-control form-control-lg font-weight-bold mb-1">
+                <button class="delete_filing" type="button" class="btn btn-primary">Delete Filling</button>
+            </div>
         <%_ } -%>
 
    </div>
