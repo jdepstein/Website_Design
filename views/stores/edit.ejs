@@ -36,10 +36,10 @@
   <main>
     <div class="card ml-3 mt-3 mb-3" style="width: 18rem;">
       <div class="card-body">
-        <h5 class="card-title"><%= store.id -%></h5>
-        <p class="card-text"><%= store.Building_Number-%> <%= store.Street-%>,</p>
-        <p class="card-text">  <%= store.City-%>, <%= store.State-%></p>
-        <a href="#" class="card-link"><%= store.flavor -%></a>
+        <h5 class="card-title"><input type="text" name="store_name" placeholder="" value=""></h5>
+        <p class="card-text"><input type="text" name="building_number" placeholder="" value=""> <input type="text" name="street" placeholder="" value="">,</p>
+        <p class="card-text">  <input type="text" name="city" placeholder="" value="">, <input type="text" name="state" placeholder="" value=""></p>
+        <a href="#" class="card-link"><input type="text" name="flavor" placeholder="" value=""></a>
         <div>
           <button  type="button" class="btn btn-primary mb-2 add_flavor">Add Flavor</button>
         </div>
