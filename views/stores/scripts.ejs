@@ -29,12 +29,15 @@
     $(this).closest('ul').append(`
     <div>
       <li><input type="text" name="falvor" placeholder="chocolate" value=""></li>
-      <button class="bg-warning mb-3">Delete Flavor</button>
+      <button class="bg-warning mb-3 delete_flav">Delete Flavor</button>
     </div>`)
-
-
   });
 
+  $('.delete_flav').on('click', function(event) {
+    event.preventDefault();
+    $(this).closest('div').remove();
+
+  });
 
 
 
