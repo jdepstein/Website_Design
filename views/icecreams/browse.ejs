@@ -1,6 +1,7 @@
 
 <h2><%= icecream._id -%></h2>
 <p>Description: <%= icecream.description -%></p>
+<img src=<%=icecream.image-%> class="img-fluid rounded mx-auto d-block" alt="Responsive image"  width="500" height="250">
 <p>Main flavor: <%= icecream.flavor -%></p>
 
 <%_ if (icecream.fillings.length > 0) { -%>
