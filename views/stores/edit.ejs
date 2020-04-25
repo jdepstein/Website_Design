@@ -1,11 +1,4 @@
 <form id="update" class="form">
-  <input type="text" name="title" placeholder="Title" value="<%= store._id -%>" class="form-control form-control-lg font-weight-bold mb-1">
-    <select multiple name="icecreams" size="<%= IceCreamNames.length -%>" class="form-control w-auto mb-1">
-    <%_ for (const id of IceCreamNames) { -%>
-      <%_ const status = store.icecream.includes(id) ? 'selected' : (id < icecream.id) ? 'unselected' : 'disabled'; -%>
-      <option <%= status -%> value="<%= id -%>">Ice Creams: <%= id -%></option>
-    <%_ } -%>
-  </select>
   <button class="btn btn-primary">Save</button>
   <button id="delete" class="btn btn-primary">Delete</button>
 </form>
