@@ -20,11 +20,11 @@
 
   $('.add_flavor').on('click', function(event){
       event.preventDefault();
-      $(this).closest('ul').append('<li><input type="text" name="" value=""><button class="bg-warning mb-3 delete_flavor">Delete Flavor</button></li>');
+      $(this).closest('ul').append('<li><input type="text" name="flavor" value=""><button class="bg-warning mb-3">Delete Flavor</button></li>');
 
   });
 
-  $('.delete_flavor').on('click', function(event){
+  $('.flavs').on('click', function(event){
       event.preventDefault();
       $(this).closest('li').remove()
 
