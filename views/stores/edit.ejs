@@ -4,8 +4,9 @@
     <%_ if (x === 0) { -%>
         <div class="row">
       <%_ } -%>
-
-      <div class="card ml-3 mt-3 mb-3 card-body" style="width: 18rem;">
+      <main>
+      <div class="card ml-3 mt-3 mb-3" style="width: 18rem;">
+        <div class="card-body">
           <h5 class="card-title"><%= store.id -%></h5>
           <p class="card-text"><%= store.Building_Number-%> <%= store.Street-%>,</p>
           <p class="card-text">  <%= store.City-%>, <%= store.State-%></p>
@@ -20,6 +21,8 @@
           <% x++; %>
 
   </div>
+  </div>
+  </main>
   <%_ if (x === 4) { -%>
       </div>
       <% var x = 0; %>
