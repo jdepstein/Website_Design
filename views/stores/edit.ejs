@@ -12,30 +12,33 @@
           <p class="card-text"><%= store.Building_Number-%> <%= store.Street-%>,</p>
           <p class="card-text">  <%= store.City-%>, <%= store.State-%></p>
           <a href="#" class="card-link"><%= store.flavor -%></a>
+
           <%_ if (store.icecream.length > 0) { -%>
             <p>Flavors In Stock:</p>
             <ul class="flavs">
             <button  type="button" class="btn btn-primary mt-2 mb-2 add_flavor">Add Flavor</button>
+
             <%_ for (const flav of store.icecream) { -%>
               <li>
-                    <a class="card-link" href="/icecreams/<%= flav -%>"><%= flav -%></a>
-                    <button class="bg-warning mb-3">Delete Flavor</button>
+                <a class="card-link" href="/icecreams/<%= flav -%>"><%= flav -%></a>
+                <button class="bg-warning mb-3">Delete Flavor</button>
               </li>
               <%_ } -%>
             </ul>
+            
             <%_ } -%>
-          <button class="bg-warning mb-3 delete_store">Delete Store</button>
-          <% x++; %>
-
-        </div>
+            <button class="bg-warning mb-3 delete_store">Delete Store</button>
+      <% x++; %>
+      </div>
     </div>
-
   </main>
+
   <%_ if (x === 4) { -%>
       </div>
       <% var x = 0; %>
       <%_ } -%>
   <%_ } -%>
+
   </div>
   <main>
     <div class="card ml-3 mt-3 mb-3" style="width: 18rem;">
