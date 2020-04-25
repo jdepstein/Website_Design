@@ -28,10 +28,10 @@
 
   $('#add_filling').on('click', function(event){
       event.preventDefault();
-      $('#Fillings').append('<div><input type="text" name="flavors" placeholder="" value="" class="form-control form-control-lg font-weight-bold mb-1"> <button class="delete_filling btn bg-warning mb-3">Delete Filling</button> </div>')
+      $('#Fillings').append('<div><input type="text" name="flavors" placeholder="" value="" class="form-control form-control-lg font-weight-bold mb-1"> <button class="bg-warning mb-3">Delete Filling</button> </div>')
   });
 
-  $('.delete_filling').on('click', function(event){
+  $('#Filling').on('click','button' function(event){
       console.log("I was clicked");
       $(this).closest('div').remove();
     });

@@ -7,13 +7,14 @@
       <input type="text" name="flavors" placeholder="<%= falvor -%>" value="<%= falvor -%>" class="form-control form-control-lg font-weight-bold mb-1">
     <%_ } -%>
 
+    <button id="add_filling" type="button" class="btn btn-primary">Add Filling</button>
     <div id="Fillings">
       <h6>Fillings</h6>
-      <button id="add_filling" type="button" class="btn btn-primary">Add Filling</button>
+
         <%_ for (filling of icecream.fillings) { -%>
             <div>
                 <input type="text" name="flavors" placeholder="<%= filling -%>" value="<%= filling -%>" class="form-control form-control-lg font-weight-bold mb-1">
-                <button type="button" class="delete_filling btn bg-warning mb-3">Delete Filling</button>
+                <button class="bg-warning mb-3">Delete Filling</button>
             </div>
         <%_ } -%>
 
