@@ -14,7 +14,6 @@
   $('#update').on('submit', function(event) {
     const form = $(this);
     event.preventDefault();
-    console.log("HELLO");
     $.ajax({method: 'put', url: '/stores', data: form.serialize()})
       .fail(error => alert(error.responseText));
   });
@@ -26,9 +25,5 @@
       .fail(error => alert(error.responseText));
   });
 
-  $('#add_filling').on('click', function(event){
-      event.preventDefault();
-      console.log("HELLO");
-      $('#Fillings').append('<div class="Filling_group"><input type="text" name="flavors" placeholder="" value="" class="form-control form-control-lg font-weight-bold mb-1"></div>')
-  });
+  
 </script>
