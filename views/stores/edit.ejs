@@ -11,14 +11,15 @@
           <p class="card-text"><%= store.Building_Number-%> <%= store.Street-%>,</p>
           <p class="card-text">  <%= store.City-%>, <%= store.State-%></p>
           <a href="#" class="card-link"><%= store.flavor -%></a>
-          <button class="bg-warning mb-3">Delete Store</button>
           <%_ if (store.icecream.length > 0) { -%>
             <p>Flavors In Stock:</p>
             <%_ for (const flav of store.icecream) { -%>
               <a class="card-link" href="/icecreams/<%= flav -%>"><%= flav -%></a>
               <%_ } -%>
             <%_ } -%>
+          <button class="bg-warning mb-3">Delete Store</button>
           <% x++; %>
+
   </div>
   </div>
   <%_ if (x === 4) { -%>
