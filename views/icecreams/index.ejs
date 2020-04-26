@@ -6,13 +6,9 @@
 
     <div class="container-fluid">
       <div class="row">
+
         <%_}-%>
         <div class="col-auto p-3 border-right">
-          <%_if (admin) {-%>
-            <form id="create" class="form my-1">
-              <input type="text" name="_id" placeholder="Icecream" size="1" class="form-control">
-            </form>
-          <%_}-%>
           <nav class="nav nav-pills flex-column" >
             <p class="font-weight-bold">Our Ice Cream</p>
             <%_for (const id of IceCreamNames) {-%>
@@ -20,6 +16,11 @@
               <a href="/icecreams/<%= id -%>" class="nav-item nav-link text-dark font-italic <%= status -%>"><%= id -%></a>
             <%_}-%>
           </nav>
+          <%_if (admin) {-%>
+            <form id="create" class="form my-1">
+              <input type="text" name="_id" placeholder="Icecream" size="1" class="form-control">
+            </form>
+          <%_}-%>
         </div>
         <div class="col">
           <main class="p-3">
