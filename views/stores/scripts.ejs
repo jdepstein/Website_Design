@@ -2,7 +2,7 @@
 <script>
 
 
-  $('.currstore').on('submit','update_store' function(event) {
+  $('.currstore').on('submit','update_store', function(event) {
     const form = $(this);
     event.preventDefault();
     $.ajax({method: 'post', url: '/stores', data: form.serialize()})
