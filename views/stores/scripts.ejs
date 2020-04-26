@@ -12,7 +12,7 @@
 
   $('.currstore').on('click','update_store', function(event) {
     const form = $(this).closest('form')
-    console.log(form);
+    console.log("Hello");
     event.preventDefault();
     $.ajax({method: 'put', url: `/stores/${form.attr("id")}`, data: form.serialize()})
       .done(() => window.location.replace('/stores'))
