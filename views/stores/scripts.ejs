@@ -10,7 +10,7 @@
       .fail(error => alert(error.responseText));
   });
 
-  $('.currstore').on('click','update_store', function(event) {
+  $('.currstore').on('submit', function(event) {
     const form = $(this).closest('form')
     console.log("Hello");
     event.preventDefault();
