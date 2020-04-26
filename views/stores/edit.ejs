@@ -12,12 +12,12 @@
           </h5>
 
           <p class="card-text">
-            <input type="text" name="building_number" placeholder="<%= store.Building_Number-%>" value="<%= store.Building_Number-%>">
-            <input type="text" name="street" placeholder="<%= store.Street-%>" value="<%= store.Street-%>">,
+            <input type="text" name="Building_number" placeholder="<%= store.Building_Number-%>" value="<%= store.Building_Number-%>">
+            <input type="text" name="Street" placeholder="<%= store.Street-%>" value="<%= store.Street-%>">,
           </p>
           <p class="card-text">
-             <input type="text" name="city" placeholder=" <%= store.City-%>" value=" <%= store.City-%>">,
-             <input type="text" name="state" placeholder="<%= store.State-%>" value="<%= store.State-%>">
+             <input type="text" name="City" placeholder=" <%= store.City-%>" value=" <%= store.City-%>">,
+             <input type="text" name="State" placeholder="<%= store.State-%>" value="<%= store.State-%>">
           </p>
 
           <%_ if (store.icecream.length > 0) { -%>
@@ -49,9 +49,13 @@
   <form class="new_store">
     <div class="card ml-3 mt-3 mb-3" style="width: 18rem;">
       <div class="card-body">
-        <h5 class="card-title"><input type="text" name="_id" placeholder="store_name" value=""></h5>
-        <p class="card-text"><input type="text" name="Building_Number" placeholder="building_number" value=""> <input type="text" name="Street" placeholder="street" value="">,</p>
-        <p class="card-text">  <input type="text" name="City" placeholder="city" value="">, <input type="text" name="State" placeholder="state" value=""></p>
+        <h5 class="card-title"><input type="text" name="_id" placeholder="Store Name" value=""></h5>
+        <p class="card-text">
+          <input type="text" name="Building_Number" placeholder="Building #" value="">
+          <input type="text" name="Street" placeholder="street" value="">,</p>
+        <p class="card-text">
+          <input type="text" name="City" placeholder="city" value="">,
+          <input type="text" name="State" placeholder="state" value=""></p>
         <div>
           <ul>
             <button  type="button" class="btn btn-primary mt-2 mb-2 add_flavor">Add Flavor</button>
