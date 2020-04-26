@@ -5,7 +5,7 @@ const Store = new mongoose.Schema({
   _id: String,
   city: String,
   state: String,
-  Street: String,
+  street: String,
   building_number: Number,
   icecream:[String]
 });
