@@ -18,8 +18,9 @@
   });
 
   $('.currstore').on('click','.delete_store', function(event) {
+    const form = $(this).closest('form')
     event.preventDefault();
-    $.ajax({method: 'delete', url: '/stores'})
+    $.ajax({method: 'delete', url: `/stores/${form.attr("id")}`})
       .done(() => window.location.replace('/stores'))
       .fail(error => alert(error.responseText));
   });
