@@ -16,7 +16,7 @@ module.exports.retrieve = function(request, response, next) {
     if (icecream) {
       response.render('icecreams/index', {icecream: icecream, IceCreamNames: IceCreamNames});
     } else {
-      next(); 
+      next();
     }
   }).catch(error => next(error));
 };
@@ -24,7 +24,7 @@ module.exports.retrieve = function(request, response, next) {
 // POST
 module.exports.create = function(request, response, next) {
   IceCream.create(request.body)
-    .then(iceream => response.status(201).send(icecream.id))
+    .then(icecream => response.status(201).send(icecream.id))
     .catch(error => next(error));
 };
 
