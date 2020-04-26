@@ -11,9 +11,9 @@
   });
 
   $('.currstore').on('click','update_store', function(event) {
-    const form = $(this);
+    const form = $(this).closest('form')
     event.preventDefault();
-    $.ajax({method: 'put', url: '/stores', data: form.serialize()})
+    $.ajax({method: 'put', url: `/stores/${form.attr("id")}`, data: form.serialize()})
       .fail(error => alert(error.responseText));
   });
 
