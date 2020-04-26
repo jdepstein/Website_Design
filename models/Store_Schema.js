@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const Store = new mongoose.Schema({
   _id: String,
   city: String,
-  State: String,
+  state: String,
   Street: String,
   building_number: Number,
   icecream:[String]
