@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const IceCream = new mongoose.Schema({
   _id: String,
-  flavor: [String],
+  flavors: [String],
   fillings: [String],
   description: String,
   image: String

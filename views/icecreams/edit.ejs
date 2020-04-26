@@ -8,9 +8,9 @@
   <h4>Flavors</h4>
     <button id="add_flavor" type="button" class="btn btn-primary mb-2">Add Falvor</button>
     <div id="Flavors">
-      <%_ for (flavor of icecream.flavor) { -%>
+      <%_ for (flavor of icecream.flavors) { -%>
         <div>
-          <input type="text" name="flavor" placeholder="<%= flavor -%>" value="<%= flavor -%>" class="form-control form-control-lg font-weight-bold mb-1">
+          <input type="text" name="flavors" placeholder="<%= flavor -%>" value="<%= flavor -%>" class="form-control form-control-lg font-weight-bold mb-1">
           <button class="bg-warning mb-3">Delete Flavor</button>
         </div>
       <%_ } -%>
