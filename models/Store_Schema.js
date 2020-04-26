@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 // Define the schema
 const Store = new mongoose.Schema({
   _id: String,
-  City: String,
+  city: String,
   State: String,
   Street: String,
   building_number: Number,
