@@ -25,12 +25,12 @@ const icecreams = [
 
 
 const stores = [
-  new Store({_id: "Sundae Fundae Original", City: "Chocolate Chip", State: "NY", Street: "Vanilla Ave", Building_Number: 7, icecream:["Skunks Treat", "Sundae Fundae", "Won't Fudge"]}),
-  new Store({_id: "Fundae on Sundae", City: "Sweet", State: "MA", Street: "Sundea Ave", Building_Number: 80, icecream:["Bohemian Raspberry", "Mocha-licious", "Sundae Fundae", "Won't Fudge"]}),
-  new Store({_id: "Fundae Creamery", City: "Milkshake", State: "IL", Street: "Rocky Road", Building_Number: 216, icecream:["Don't Let Me Frown", "Fairy Floss", "Sundae Fundae", "When It Rains It S'mores"]}),
-  new Store({_id: "Sundae Fundae Jr", City: "Cherry", State: "NH", Street: "Dairy Ave", Building_Number: 305, icecream:["Skunks Treat", "sPEACHless", "Sundae Fundae"] }),
-  new Store({_id: "How About a Sundae", City: "Cherry", State: "NH", Street: "Icy Ave", Building_Number: 3, icecream:["Choc It Out","Sundae Fundae","Vanilla Ice"] }),
-  new Store({_id: "Sundae Everydae", City: "Sprinkles", State: "PA", Street: "Strawberry Lane", Building_Number: 5, icecream:["Burst Your Bubble", "Choc It Out", "Sundae Fundae"] })
+  new Store({_id: "Sundae Fundae Original", City: "Chocolate Chip", State: "NY", Street: "Vanilla Ave", building_number: 7, icecream:["Skunks Treat", "Sundae Fundae", "Won't Fudge"]}),
+  new Store({_id: "Fundae on Sundae", City: "Sweet", State: "MA", Street: "Sundea Ave", building_number: 80, icecream:["Bohemian Raspberry", "Mocha-licious", "Sundae Fundae", "Won't Fudge"]}),
+  new Store({_id: "Fundae Creamery", City: "Milkshake", State: "IL", Street: "Rocky Road", building_number: 216, icecream:["Don't Let Me Frown", "Fairy Floss", "Sundae Fundae", "When It Rains It S'mores"]}),
+  new Store({_id: "Sundae Fundae Jr", City: "Cherry", State: "NH", Street: "Dairy Ave", building_number: 305, icecream:["Skunks Treat", "sPEACHless", "Sundae Fundae"] }),
+  new Store({_id: "How About a Sundae", City: "Cherry", State: "NH", Street: "Icy Ave", building_number: 3, icecream:["Choc It Out","Sundae Fundae","Vanilla Ice"] }),
+  new Store({_id: "Sundae Everydae", City: "Sprinkles", State: "PA", Street: "Strawberry Lane", building_number: 5, icecream:["Burst Your Bubble", "Choc It Out", "Sundae Fundae"] })
 ];
 
 
