@@ -1,16 +1,24 @@
-<form id="update" class="form">
-
   <% var x = 0; %>
   <%_ for (const store of stores) { -%>
     <%_ if (x === 0) { -%>
         <div class="row">
       <%_ } -%>
+      <form class="currstore">
       <div class="card ml-3 mt-3 mb-3" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title"><%= store.id -%></h5>
-          <p class="card-text"><%= store.Building_Number-%> <%= store.Street-%>,</p>
-          <p class="card-text">  <%= store.City-%>, <%= store.State-%></p>
-          <a href="#" class="card-link"><%= store.flavor -%></a>
+
+          <h5 class="card-title">
+            <input type="text" name="store_name" placeholder="<%= store.id -%>" value="<%= store.id -%>">
+          </h5>
+
+          <p class="card-text">
+            <input type="text" name="building_number" placeholder="<%= store.Building_Number-%>" value="<%= store.Building_Number-%>">
+            <input type="text" name="street" placeholder="<%= store.Street-%>" value="<%= store.Street-%>">,
+          </p>
+          <p class="card-text">
+             <input type="text" name="city" placeholder=" <%= store.City-%>" value=" <%= store.City-%>">,
+             <input type="text" name="state" placeholder="<%= store.State-%>" value="<%= store.State-%>">
+          </p>
 
           <%_ if (store.icecream.length > 0) { -%>
             <p>Flavors In Stock:</p>
@@ -29,14 +37,16 @@
 
         </div>
           <button class="bg-warning mb-3 delete_store">Delete Store</button>
+          <button class="bg-primary mb-3 update_store">Update Store</button>
   </div>
+  </form>
   <%_ if (x === 4) { -%>
       </div>
       <% var x = 0; %>
       <%_ } -%>
   <%_ } -%>
 
-  <main>
+  <form class="new_store">
     <div class="card ml-3 mt-3 mb-3" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title"><input type="text" name="store_name" placeholder="store_name" value=""></h5>
@@ -51,6 +61,4 @@
 
       </div>
     </div>
-  </main>
-  <button  type="submit" class="btn btn-primary mt-2 mb-2 ">Submit Changes</button>
 </form>

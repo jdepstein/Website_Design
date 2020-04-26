@@ -2,7 +2,7 @@
 <script>
 
 
-  $('#create').on('submit', function(event) {
+  $('.new_store').on('submit', function(event) {
     const form = $(this);
     event.preventDefault();
     $.ajax({method: 'post', url: '/stores', data: form.serialize()})
@@ -10,14 +10,14 @@
       .fail(error => alert(error.responseText));
   });
 
-  $('#update').on('submit', function(event) {
+  $('.currstore').on('click','update_store', function(event) {
     const form = $(this);
     event.preventDefault();
     $.ajax({method: 'put', url: '/stores', data: form.serialize()})
       .fail(error => alert(error.responseText));
   });
 
-  $('#delete').on('click', function(event) {
+  $('.currstore').on('click','.delete_store', function(event) {
     event.preventDefault();
     $.ajax({method: 'delete', url: '/stores'})
       .done(() => window.location.replace('/stores'))
@@ -38,10 +38,6 @@
     $(this).closest('div').remove();
 
   });
-
-  $('.delete_store').on('click', function(event) {
-    event.preventDefault();
-    $(this).closest('div').remove();
 
   });
 
