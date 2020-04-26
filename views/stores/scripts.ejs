@@ -2,7 +2,7 @@
 <script>
 
 
-  $('.currstore').on('submit','update_store', function(event) {
+  $('.currstore').on('click','update_store', function(event) {
     const form = $(this);
     event.preventDefault();
     $.ajax({method: 'post', url: '/stores', data: form.serialize()})
@@ -10,7 +10,7 @@
       .fail(error => alert(error.responseText));
   });
 
-  $('.new_store').on('click', function(event) {
+  $('.new_store').on('submit', function(event) {
     const form = $(this);
     event.preventDefault();
     $.ajax({method: 'put', url: '/stores', data: form.serialize()})
