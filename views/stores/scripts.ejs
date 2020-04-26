@@ -14,6 +14,7 @@
     const form = $(this).closest('form')
     event.preventDefault();
     $.ajax({method: 'put', url: `/stores/${form.attr("id")}`, data: form.serialize()})
+      .done(() => window.location.replace('/stores'))
       .fail(error => alert(error.responseText));
   });
 
