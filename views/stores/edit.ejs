@@ -1,7 +1,7 @@
-<div class="row">
+
   <%_ for (const store of stores) { -%>
       <form id="<%= store.id -%>" class="currstore  form-control ">
-      <div class="card ml-3 mt-3 mb-3" style="width: 18rem;">
+      <div class="card ml-3 mt-3 mb-3 float-left" style="width: 18rem;">
         <div class="card-body">
 
           <h5 class="card-title">
@@ -39,7 +39,7 @@
   <%_ } -%>
 
   <form class="new_store form-control ">
-    <div class="card ml-3 mt-3 mb-3" style="width: 18rem;">
+    <div class="card ml-3 mt-3 mb-3 float-left" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title"><input type="text" name="_id" placeholder="Store Name" value=""></h5>
         <p class="card-text">
@@ -57,4 +57,3 @@
       <button  type="sumbit" class="btn btn-primary mt-2 mb-2">Add Store</button>
     </div>
 </form>
-</div>
