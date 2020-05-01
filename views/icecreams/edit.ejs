@@ -10,7 +10,7 @@
     <div id="Flavors">
       <%_ for (flavor of icecream.flavors) { -%>
         <div>
-          <li><%= flavor -%></li>
+          <li name="flavors"><%= flavor -%></li>
           <button class="bg-warning mb-3">Delete Flavor</button>
         </div>
       <%_ } -%>
@@ -22,7 +22,7 @@
       <div id="Fillings">
           <%_ for (filling of icecream.fillings) { -%>
               <div>
-                <li><%= filling -%></li>
+                <li name="fillings"><%= filling -%></li>
                   <button class="bg-warning mb-3">Delete Filling</button>
               </div>
           <%_ } -%>
