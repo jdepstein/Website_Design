@@ -23,7 +23,7 @@
               <button  type="button" class="btn btn-primary mt-2 mb-2 add_flavor">Add Flavor</button>
               <%_ for (const flav of store.icecream) { -%>
                 <div>
-                  <li name="icecream"><%= flav -%></li>
+                  <li name="icecream" value=<%= flav -%>><%= flav -%></li>
                   <button class="bg-warning mb-3 delete_flav">Delete Flavor</button>
                 </div>
               <%_ } -%>
