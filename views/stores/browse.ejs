@@ -1,8 +1,6 @@
-<% var x = 0; %>
-<%_ for (const store of stores) { -%>
-  <%_ if (x === 0) { -%>
-      <div class="row">
-    <%_ } -%>
+
+<div class="row">
+  <%_ for (const store of stores) { -%>
     <div class="card ml-3 mt-3 mb-3" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title"><%= store.id -%></h5>
@@ -18,11 +16,7 @@
             <%_ } -%>
           </ul>
           <%_ } -%>
-        <% x++; %>
-</div>
-</div>
-<%_ if (x === 4) { -%>
+      </div>
     </div>
-    <% var x = 0; %>
-    <%_ } -%>
-<%_ } -%>
+  <%_ } -%>
+</div>

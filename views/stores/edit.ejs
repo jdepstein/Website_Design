@@ -1,8 +1,5 @@
-  <% var x = 0; %>
+<div class="row">
   <%_ for (const store of stores) { -%>
-    <%_ if (x === 0) { -%>
-        <div class="row">
-      <%_ } -%>
       <form id="<%= store.id -%>" class="currstore">
       <div class="card ml-3 mt-3 mb-3" style="width: 18rem;">
         <div class="card-body">
@@ -26,13 +23,12 @@
               <button  type="button" class="btn btn-primary mt-2 mb-2 add_flavor">Add Flavor</button>
               <%_ for (const flav of store.icecream) { -%>
                 <div>
-                  <li><input type="text" name="icecream" placeholder="<%=flav-%>" value="<%= flav -%>"></li>
+                  <li><%= flav -%></li>
                   <button class="bg-warning mb-3 delete_flav">Delete Flavor</button>
                 </div>
               <%_ } -%>
             </ul>
           <%_ } -%>
-          <% x++; %>
 
 
         </div>
@@ -40,10 +36,6 @@
           <button type="sumbit" class="bg-primary mb-3">Update Store</button>
   </div>
   </form>
-  <%_ if (x === 4) { -%>
-      </div>
-      <% var x = 0; %>
-      <%_ } -%>
   <%_ } -%>
 
   <form class="new_store">
@@ -65,3 +57,4 @@
       <button  type="sumbit" class="btn btn-primary mt-2 mb-2">Add Store</button>
     </div>
 </form>
+</div>
