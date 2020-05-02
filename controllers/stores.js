@@ -6,7 +6,7 @@ module.exports.index = function(request, response, next) {
   const order = request.query.sort || '_id';
 
   const queries = [
-    Store.find().sort(order)
+    Store.find().sort(order),
     IceCream.distinct('_id')
   ];
 
