@@ -1,4 +1,7 @@
 const IceCream = require('../models/IceCream_Schema');
+request.body.fillings = request.body.fillings || [];
+
+
 module.exports.index = function(request, response, next) {
   IceCream.distinct('_id')
     .then(IceCreamNames => response.redirect(`/icecreams/${IceCreamNames[0]}`))
@@ -31,13 +34,13 @@ module.exports.create = function(request, response, next) {
 // DELETE
 module.exports.delete = function(request, response, next) {
   IceCream.findByIdAndDelete(request.params.id)
-    .then(iceream => iceream ? response.status(200).end() : next())
+    .then(icecream => icecream ? response.status(200).end() : next())
     .catch(error => next(error));
 };
 
 // PUT
 module.exports.update = function(request, response, next) {
-  IceCream.findByIdAndUpdate(request.params.id, request.body)
-    .then(iceream => iceream ? response.status(200).end() : next())
+  IceCream.findByIdAndUpdate(request.params.id, request.body, {runValidators: true})
+    .then(icecream => icecream ? response.status(200).end() : next())
     .catch(error => next(error));
 };
