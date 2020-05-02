@@ -1,6 +1,4 @@
 const Store = require('../models/Store_Schema');
-request.body.icecream = request.body.icecream || []; 
-
 
 module.exports.index = function(request, response, next) {
   const order = request.query.sort || '_id';
@@ -26,6 +24,8 @@ module.exports.delete = function(request, response, next) {
 
 // PUT
 module.exports.update = function(request, response, next) {
+  request.body.icecream = request.body.icecream || [];
+
   Store.findByIdAndUpdate(request.params.id, request.body, {runValidators: true})
     .then(store => store ? response.status(200).end() : next())
     .catch(error => next(error));
