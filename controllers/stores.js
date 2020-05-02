@@ -11,7 +11,7 @@ module.exports.index = function(request, response, next) {
   ];
 
   Promise.all(queries).then(function([stores, IceCreamNames]) {
-    response.render('icecreams/index', {stores: stores, order: order, IceCreamNames: IceCreamNames});
+    response.render('stores/index', {stores: stores, order: order, IceCreamNames: IceCreamNames});
   }).catch(error => next(error));
 };
 
