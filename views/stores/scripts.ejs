@@ -36,6 +36,12 @@
     $(this).closest('ul').append(`
     <div>
       <li><input type="text" name="icecream" placeholder="Chocolate" value=""></li>
+      <li><select name="icecream">
+        <%_ for (const icecream of IceCreamNames) { -%>
+          <%_ const status = (icecream === store.icecream) ? 'selected' : 'unselected'; -%>
+          <option <%= status -%> value="<%= icecream -%>"><%= icecream -%></option>
+        <%_ } -%>
+      </select></li>
       <button class="bg-warning mb-3 delete_flav">Delete Flavor</button>
     </div>`)
   });
@@ -45,8 +51,5 @@
     $(this).closest('div').remove();
 
   });
-
-
-
 
 </script>

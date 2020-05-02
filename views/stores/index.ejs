@@ -6,7 +6,7 @@
 
     <main class= ml-3>
       <%_ if (admin) { -%>
-         <%- include('./edit', {stores: stores, order: order}); -%>
+         <%- include('./edit', {stores: stores, order: order, IceCreamNames: IceCreamNames}); -%>
         <%_ } else { -%>
          <%- include('./browse', {stores: stores, order: order}); -%>
         <%_ } -%>
