@@ -10,8 +10,8 @@ module.exports.index = function(request, response, next) {
     IceCream.distinct('_id')
   ];
 
-  Promise.all(queries).then(function([stores, icecreamIDs]) {
-    response.render('icecreams/index', {stores: stores, order: order, icecreamIDs: icecreamIDs});
+  Promise.all(queries).then(function([stores, IceCreamNames]) {
+    response.render('icecreams/index', {stores: stores, order: order, IceCreamNames: IceCreamNames});
   }).catch(error => next(error));
 };
 
