@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const connect = require('./db');
-const IceCream = require('./models/IceCream_Sechma');
+const IceCream = require('./models/IceCream_Schema');
 const Store = require('./models/Store_Schema');
 
 // Connect to the database
