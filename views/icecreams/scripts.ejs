@@ -1,6 +1,10 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
 
+  // Highlight changes in form inputs
+  $(document).on('input', '.form-control', function(event) {
+    $(this).addClass('bg-dark text-white');
+  });
 
   $('#create').on('submit', function(event) {
     const form = $(this);
@@ -21,9 +25,11 @@
 
   $('#delete').on('click', function(event) {
     event.preventDefault();
-    $.ajax({method: 'delete', url: '/icecreams/<%= icecream.id -%>'})
-      .done(() => window.location.replace('/icecreams'))
-      .fail(error => alert(error.responseText));
+    if (confirm('Delete all traces of this ice cream from project-camdakotajosh?')) {
+      $.ajax({method: 'delete', url: '/icecreams/<%= icecream.id -%>'})
+        .done(() => window.location.replace('/icecreams'))
+        .fail(error => alert(error.responseText)); 
+    }
   });
 
   $('#add_filling').on('click', function(event){

@@ -1,6 +1,10 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
 
+  // Highlight changes in form inputs
+  $(document).on('input', '.form-control', function(event) {
+    $(this).addClass('bg-dark text-white');
+  });
 
   $('.new_store').on('submit', function(event) {
     const form = $(this);

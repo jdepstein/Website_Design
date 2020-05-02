@@ -1,11 +1,18 @@
 const Store = require('../models/Store_Schema');
+const IceCream = require('../models/IceCream_Schema');
 
+// GET
 module.exports.index = function(request, response, next) {
   const order = request.query.sort || '_id';
 
-  Store.find().sort(order)
-    .then(stores => response.render('stores/index', {stores: stores, order: order}))
-    .catch(error => next(error));
+  const queries = [
+    Store.find().sort(order)
+    IceCream.distinct('_id')
+  ];
+
+  Promise.all(queries).then(function([stores, icecreamIDs]) {
+    response.render('icecreams/index', {stores: stores, order: order, icecreamIDs: icecreamIDs});
+  }).catch(error => next(error));
 };
 
 // POST
