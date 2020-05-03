@@ -35,11 +35,8 @@
   $('#add_filling').on('click', function(event){
       event.preventDefault();
       $('#Fillings').append(`
-      <div>
-        <li>
-          <input type="text" name="fillings" placeholder="" value="" class="form-control form-control-lg font-weight-bold mb-1">
-        </li>
-      </div>`)
+
+        <li><input type="text" name="fillings" placeholder="" value="" class="form-control form-control-lg font-weight-bold mb-1"><button class=" btn btn-warning mb-3">Delete Filling</button></li>`)
 
   });
 
