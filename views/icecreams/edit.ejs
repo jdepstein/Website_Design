@@ -10,8 +10,8 @@
     <div id="Flavors">
       <%_ for (flavor of icecream.flavors) { -%>
           <div class="form-group mb-2">
-            <input readonly class="form-control-plaintext mb-1" type="text" name="flavors" value="<%= flavor -%>">
-            <button class=" btn btn-warning ml-1">Delete Flavor</button>
+            <input readonly class="form-control-plaintext" type="text" name="flavors" value="<%= flavor -%>">
+            <button class=" btn btn-warning">Delete Flavor</button>
           </div>
       <%_ } -%>
     </div>
@@ -22,8 +22,8 @@
       <div id="Fillings">
           <%_ for (filling of icecream.fillings) { -%>
                 <div class="form-group mb-2">
-                  <input readonly class="form-control-plaintext mb-1" type="text" name="fillings" value="<%= filling -%>">
-                  <button class=" btn btn-warning ml-1">Delete Filling</button>
+                  <input readonly class="form-control-plaintext" type="text" name="fillings" value="<%= filling -%>">
+                  <button class=" btn btn-warning">Delete Filling</button>
                 </div>
 
 
