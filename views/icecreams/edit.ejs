@@ -9,7 +9,7 @@
     <button id="add_flavor" type="button" class="btn btn-primary mb-2">Add Flavor</button>
     <div id="Flavors">
       <%_ for (flavor of icecream.flavors) { -%>
-          <div class="input-group mb-3">
+          <div>
             <li><input readonly class="form-control-plaintext" type="text" name="flavors" value="<%= flavor -%>" class="form-control form-control-lg font-weight-bold mb-1"></li>
             <button class=" btn btn-warning mb-3">Delete Flavor</button>
           </div>
