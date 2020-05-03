@@ -1,21 +1,23 @@
-<div class="row">
-  <%_ for (const store of stores) { -%>
-    <div class="card ml-3 mt-3 mb-3" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title"><%= store.id -%></h5>
-        <p class="card-text"><%= store.building_number-%> <%= store.street-%>,</p>
-        <p class="card-text"><%= store.city-%>, <%= store.state-%></p>
-        <a href="#" class="card-link"><%= store.flavor -%></a>
+<div class="container-fluid">
+  <div class="row">
+    <%_ for (const store of stores) { -%>
+      <div class="card m-3" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%= store.id -%></h5>
+          <p class="card-text"><%= store.building_number-%> <%= store.street-%>,</p>
+          <p class="card-text"><%= store.city-%>, <%= store.state-%></p>
+          <a href="#" class="card-link"><%= store.flavor -%></a>
 
-        <%_ if (store.icecream.length > 0) { -%>
-          <p>Flavors In Stock:</p>
-          <ul>
-          <%_ for (const flav of store.icecream) { -%>
-            <li><a class="card-link" href="/icecreams/<%= flav -%>"><%= flav -%></a></li>
+          <%_ if (store.icecream.length > 0) { -%>
+            <p>Flavors In Stock:</p>
+            <ul>
+            <%_ for (const flav of store.icecream) { -%>
+              <li><a class="card-link" href="/icecreams/<%= flav -%>"><%= flav -%></a></li>
+              <%_ } -%>
+            </ul>
             <%_ } -%>
-          </ul>
-          <%_ } -%>
+        </div>
       </div>
-    </div>
-  <%_ } -%>
+    <%_ } -%>
+  </div>
 </div>
