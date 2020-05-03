@@ -28,13 +28,14 @@
               <%_ } -%>
             </ul>
           <%_ } -%>
+
           <button  type="button" class="btn btn-primary mt-2 mb-2 add_flavor">Add Flavor</button>
-          <li><select name="icecream">
+          <select>
             <%_ for (const icecream of IceCreamNames) { -%>
               <%_ const status = (icecream === store.icecream) ? 'selected' : 'unselected'; -%>
               <option <%= status -%> value="<%= icecream -%>"><%= icecream -%></option>
             <%_ } -%>
-          </select></li>
+          </select>
 
 
         </div>
