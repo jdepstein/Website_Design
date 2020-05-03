@@ -22,7 +22,7 @@
             <ul>
               <%_ for (const flav of store.icecream) { -%>
                 <div>
-                  <li><input name="icecream" value="<%= flav -%>"></input> </li>
+                  <li><input readonly class="form-control-plaintext" name="icecream" value="<%= flav -%>"></input> </li>
                   <button class="bg-warning mb-3 delete_flav">Delete Flavor</button>
                 </div>
               <%_ } -%>
