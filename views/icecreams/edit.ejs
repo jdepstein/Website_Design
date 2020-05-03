@@ -1,17 +1,17 @@
 <form id="update" class="form">
 
   <h4>Description</h4>
-    <textarea name="description" placeholder="Description" rows="3" class="form-control mb-1"><%= icecream.description -%></textarea>
+    <textarea class="form-control" name="description" placeholder="Description" rows="3" class="form-control mb-1"><%= icecream.description -%></textarea>
   <h4>Image-Path</h4>
-    <input type="text" name="image" placeholder="<%= icecream.image -%>" value="<%= icecream.image-%>" class="form-control form-control-lg font-weight-bold mb-1">
+    <input class="form-control" type="text" name="image" placeholder="<%= icecream.image -%>" value="<%= icecream.image-%>" class="form-control form-control-lg font-weight-bold mb-1">
 
   <h4>Flavors</h4>
     <button id="add_flavor" type="button" class="btn btn-primary mb-2">Add Flavor</button>
     <div id="Flavors">
       <%_ for (flavor of icecream.flavors) { -%>
         <div>
-          <input type="text" name="flavors" value="<%= flavor -%>" class="form-control form-control-lg font-weight-bold mb-1">
-          <button class="bg-warning mb-3">Delete Flavor</button>
+          <input readonly class="form-control-plaintext" type="text" name="flavors" value="<%= flavor -%>" class="form-control form-control-lg font-weight-bold mb-1">
+          <button class=" btn btn-warning mb-3">Delete Flavor</button>
         </div>
       <%_ } -%>
     </div>
@@ -22,8 +22,8 @@
       <div id="Fillings">
           <%_ for (filling of icecream.fillings) { -%>
               <div>
-                <input type="text" name="fillings" value="<%= filling -%>" class="form-control form-control-lg font-weight-bold mb-1">
-                  <button class="bg-warning mb-3">Delete Filling</button>
+                <input readonly class="form-control-plaintext" type="text" name="fillings" value="<%= filling -%>" class="form-control form-control-lg font-weight-bold mb-1">
+                  <button class=" btn btn-warning mb-3">Delete Filling</button>
               </div>
           <%_ } -%>
      </div>
