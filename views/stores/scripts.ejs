@@ -33,7 +33,7 @@
 
   $('.add_flavor').on('click', function(event) {
     event.preventDefault();
-    const val = this.closest('option').value()
+    const val = value(this.closest('option'))
     $(this).closest('ul').append(`
     <div>
     <li><input readonly class="form-control-plaintext" name="icecream" value="${val}"></input> </li>
