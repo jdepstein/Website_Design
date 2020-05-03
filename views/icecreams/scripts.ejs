@@ -49,15 +49,17 @@
     $('#add_flavor').on('click', function(event){
         event.preventDefault();
         $('#Flavors').append(`
-        <li>
-          <input type="text" name="flavors" placeholder="" value="" class="form-control form-control-lg font-weight-bold mb-1">
+        <div class="input-group mb-3">
+          <li>
+            <input type="text" name="flavors" placeholder="" value="" class="form-control form-control-lg font-weight-bold mb-1">
+          </li>
           <button class="bg-warning mb-3">Delete Falvor</button>
-        </li>`)
+        </div>`)
     });
 
     $('#Flavors').on('click','button', function(event){
         event.preventDefault();
-        $(this).closest('li').remove();
+        $(this).closest('div').remove();
       });
 
 
