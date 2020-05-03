@@ -20,7 +20,6 @@
           <%_ if (store.icecream.length > 0) { -%>
             <p>Flavors In Stock:</p>
             <ul>
-              <button  type="button" class="btn btn-primary mt-2 mb-2 add_flavor">Add Flavor</button>
               <%_ for (const flav of store.icecream) { -%>
                 <div>
                   <li><input name="icecream" value="<%= flav -%>"></input> </li>
@@ -29,6 +28,13 @@
               <%_ } -%>
             </ul>
           <%_ } -%>
+          <button  type="button" class="btn btn-primary mt-2 mb-2 add_flavor">Add Flavor</button>
+          <li><select name="icecream">
+            <%_ for (const icecream of IceCreamNames) { -%>
+              <%_ const status = (icecream === store.icecream) ? 'selected' : 'unselected'; -%>
+              <option <%= status -%> value="<%= icecream -%>"><%= icecream -%></option>
+            <%_ } -%>
+          </select></li>
 
 
         </div>
