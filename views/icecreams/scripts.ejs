@@ -28,36 +28,36 @@
     if (confirm('Delete all traces of this ice cream from project-camdakotajosh?')) {
       $.ajax({method: 'delete', url: '/icecreams/<%= icecream.id -%>'})
         .done(() => window.location.replace('/icecreams'))
-        .fail(error => alert(error.responseText)); 
+        .fail(error => alert(error.responseText));
     }
   });
 
   $('#add_filling').on('click', function(event){
       event.preventDefault();
       $('#Fillings').append(`
-      <div>
+      <li>
         <input type="text" name="fillings" placeholder="" value="" class="form-control form-control-lg font-weight-bold mb-1">
         <button class="bg-warning mb-3">Delete Filling</button>
-      </div>`)
+      </li>`)
   });
 
   $('#Fillings').on('click','button', function(event){
       event.preventDefault();
-      $(this).closest('div').remove();
+      $(this).closest('li').remove();
     });
 
     $('#add_flavor').on('click', function(event){
         event.preventDefault();
         $('#Flavors').append(`
-        <div>
+        <li>
           <input type="text" name="flavors" placeholder="" value="" class="form-control form-control-lg font-weight-bold mb-1">
           <button class="bg-warning mb-3">Delete Falvor</button>
-        </div>`)
+        </li>`)
     });
 
     $('#Flavors').on('click','button', function(event){
         event.preventDefault();
-        $(this).closest('div').remove();
+        $(this).closest('li').remove();
       });
 
 
