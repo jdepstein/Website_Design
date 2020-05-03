@@ -33,7 +33,7 @@
 
   $('.add_flavor').on('click', function(event) {
     event.preventDefault();
-    var op = this.closest('option')
+    var op = this.closest('select')
     console.log(op);
     $(this).closest('ul').append(`
     <div>
