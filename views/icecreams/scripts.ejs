@@ -36,11 +36,9 @@
       event.preventDefault();
       $('#Fillings').append(`
 
-        <div class="input-group mb-3">
+        <div class="input-group mb-2">
           <input type="text" name="fillings" placeholder="" value="" class="form-control form-control-lg font-weight-bold mb-1">
-          <span class="input-group-btn">
-            <button class=" btn btn-warning ml-1">Delete Filling</button>
-          </span>
+          <button class=" btn btn-warning">Delete Filling</button>
         </div>`)
 
   });
@@ -53,11 +51,9 @@
     $('#add_flavor').on('click', function(event){
         event.preventDefault();
         $('#Flavors').append(`
-        <div class="input-group mb-3">
+        <div class="form-group mb-2">
           <input type="text" name="flavors" placeholder="" value="" class="form-control form-control-lg font-weight-bold mb-1">
-          <span class="input-group-btn">
-            <button class="btn-warning btn ml-1">Delete Falvor</button>
-          </span>
+          <button class="btn-warning btn">Delete Falvor</button>
         </div>`)
     });
 
