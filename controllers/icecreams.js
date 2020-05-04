@@ -39,7 +39,8 @@ module.exports.delete = function(request, response, next) {
 // PUT
 module.exports.update = function(request, response, next) {
   request.body.fillings = request.body.fillings || [];
-  
+  request.body.flavors = request.body.fillings || [];
+
   IceCream.findByIdAndUpdate(request.params.id, request.body, {runValidators: true})
     .then(icecream => icecream ? response.status(200).end() : next())
     .catch(error => next(error));

@@ -31,6 +31,8 @@ module.exports.delete = function(request, response, next) {
 
 // PUT
 module.exports.update = function(request, response, next) {
+  request.body.icecream = request.body.fillings || [];
+
 
   Store.findByIdAndUpdate(request.params.id, request.body, {runValidators: true})
     .then(store => store ? response.status(200).end() : next())
