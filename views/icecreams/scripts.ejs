@@ -49,10 +49,11 @@
     });
 
     $('#add_flavor').on('click', function(event){
+      var val = $(this).closest('input').value();
         event.preventDefault();
         $('#Flavors').append(`
         <div class="form-group mb-2">
-          <input type="text" name="flavors" placeholder="" value="" class="form-control form-control-lg font-weight-bold">
+          <input readonly class="form-control-plaintext" type="text" name="flavors" value="${val}">
           <button class="btn btn-warning  btn-sm">Delete Falvor</button>
         </div>`)
     });
