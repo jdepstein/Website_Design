@@ -31,13 +31,13 @@
                 <%_ } -%>
 
               <div>
-                <button  type="button" class="btn-sm btn-primary mb-2 add_flavor">Add Flavor</button>
                 <select>
                   <%_ for (const icecream of IceCreamNames) { -%>
                     <%_ const status = (icecream === store.icecream) ? 'selected' : 'unselected'; -%>
                     <option class="option"<%= status -%> value="<%= icecream -%>"><%= icecream -%></option>
                   <%_ } -%>
                 </select>
+                <button  type="button" class="btn-sm btn-primary mb-2 add_flavor">Add Flavor</button>
               </div>
             </div>
 
