@@ -10,38 +10,39 @@
               </h5>
 
               <p class="card-text">
-                <input class="form-contorl" type="text" name="building_number" placeholder="<%= store.building_number-%>" value="<%= store.building_number-%>">
-                <input class="form-contorl" type="text" name="street" placeholder="<%= store.street-%>" value="<%= store.street-%>">
+                <input class="form-control" type="text" name="building_number" placeholder="<%= store.building_number-%>" value="<%= store.building_number-%>">
+                <input class="form-control" type="text" name="street" placeholder="<%= store.street-%>" value="<%= store.street-%>">
               </p>
               <p class="card-text">
-                 <input class="form-contorl" type="text" name="city" placeholder="<%= store.city-%>" value=" <%= store.city-%>">
-                 <input class="form-contorl" type="text" name="state" placeholder="<%= store.state-%>" value="<%= store.state-%>">
+                 <input class="form-control" type="text" name="city" placeholder="<%= store.city-%>" value=" <%= store.city-%>">
+                 <input class="form-control" type="text" name="state" placeholder="<%= store.state-%>" value="<%= store.state-%>">
               </p>
-              <div>
+
                 <%_ if (store.icecream.length > 0) { -%>
                     <p>Flavors In Stock:</p>
                     <ul>
                       <%_ for (const flav of store.icecream) { -%>
-                        <div>
+                        <div class="mb-2">
                           <li><input readonly class="form-control-plaintext" name="icecream" value="<%= flav -%>"></input> </li>
-                          <button class="btn-warning btn mb-3 delete_flav">Delete Flavor</button>
+                          <button class="btn-warning btn-sm delete_flav">Delete Flavor</button>
                         </div>
                       <%_ } -%>
                     </ul>
                 <%_ } -%>
-              <button  type="button" class="btn btn-primary mt-2 mb-2 add_flavor">Add Flavor</button>
-              <select>
-                <%_ for (const icecream of IceCreamNames) { -%>
-                  <%_ const status = (icecream === store.icecream) ? 'selected' : 'unselected'; -%>
-                  <option class="option"<%= status -%> value="<%= icecream -%>"><%= icecream -%></option>
-                <%_ } -%>
-              </select>
+
+              <div>
+                <button  type="button" class="btn-sm btn-primary mb-2 add_flavor">Add Flavor</button>
+                <select>
+                  <%_ for (const icecream of IceCreamNames) { -%>
+                    <%_ const status = (icecream === store.icecream) ? 'selected' : 'unselected'; -%>
+                    <option class="option"<%= status -%> value="<%= icecream -%>"><%= icecream -%></option>
+                  <%_ } -%>
+                </select>
+              </div>
             </div>
 
-
-            </div>
-              <button class="btn-warning btn mb-3 delete_store">Delete Store</button>
-              <button type="sumbit" class="btn-primary btn mb-3">Update Store</button>
+            <button class="btn-danger btn mb-3 delete_store">Delete Store</button>
+            <button type="submit" class="btn-primary btn mb-3">Update Store</button>
       </div>
       </form>
       <%_ } -%>
@@ -51,18 +52,18 @@
           <div class="card-body">
             <h5 class="card-title"><input type="text" name="_id" placeholder="Store Name" value=""></h5>
             <p class="card-text">
-              <input class="form-contorl" type="text" name="building_number" placeholder="Building ##" value="">
-              <input class="form-contorl" type="text" name="street" placeholder="Street" value=""></p>
+              <input class="form-control" type="text" name="building_number" placeholder="Building ##" value="">
+              <input class="form-control" type="text" name="street" placeholder="Street" value=""></p>
             <p class="card-text">
-              <input class="form-contorl" type="text" name="city" placeholder="City" value="">
-              <input class="form-contorl" type="text" name="state" placeholder="State" value=""></p>
+              <input class="form-control" type="text" name="city" placeholder="City" value="">
+              <input class="form-control" type="text" name="state" placeholder="State" value=""></p>
             <div>
               <ul>
               </ul>
-              <button type="button" class="btn btn-primary mt-2 mb-2 add_flavor">Add Flavor</button>
+              <button type="button" class="btn-sm btn-primary mt-2 mb-2 add_flavor">Add Flavor</button>
             </div>
           </div>
-          <button  type="sumbit" class="btn btn-primary mt-2 mb-2">Add Store</button>
+          <button  type="submit" class="btn btn-primary mt-2 mb-2">Add Store</button>
         </div>
     </form>
   </div>
