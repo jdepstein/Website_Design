@@ -3,16 +3,24 @@
   <main class="col-md-5 ml-1">
       <h2><%= icecream._id -%></h2>
       <p>Description: <%= icecream.description -%></p>
-      <p>Main flavor: <%= icecream.flavors -%></p>
 
-      <%_ if (icecream.fillings.length > 0) { -%>
-        <p>Fillings:
-          <ul>
-        <%_ for (const fill of icecream.fillings) { -%>
-              <li><a><%= fill -%></a></li>
+      <%_ if (icecream.flavors.length > 0) { -%>
+        <p>Flavors:</p>
+        <ul>
+        <%_ for (const flav of icecream.flavors) { -%>
+              <li><%= flav -%></li>
         <%_ } -%>
         </ul>
-      <%_ } -%></p>
+      <%_ } -%>
+
+      <%_ if (icecream.fillings.length > 0) { -%>
+        <p>Fillings:</p>
+        <ul>
+        <%_ for (const fill of icecream.fillings) { -%>
+              <li><%= fill -%></li>
+        <%_ } -%>
+        </ul>
+      <%_ } -%>
     </main>
 
 
