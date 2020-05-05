@@ -49,12 +49,8 @@
     });
 
     $('#add_flavor').on('click', function(event){
-      const val = $(this).closest('input');
-      console.log($(val));
-      console.log(val);
-      console.log($(val).value);
-      console.log(val.value);
-        event.preventDefault();
+      event.preventDefault();
+      const val = document.getElementById('new_flavor').value;
         $('#Flavors').append(`
         <div class="form-group mb-2">
           <input readonly class="form-control-plaintext" type="text" name="flavors" value="${val}">
