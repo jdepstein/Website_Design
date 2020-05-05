@@ -6,12 +6,15 @@
     <input class="form-control mb-1" type="text" name="image" placeholder="<%= icecream.image -%>" value="<%= icecream.image-%>">
 
   <h4>Flavors</h4>
-    <button id="add_flavor" type="button" class="btn btn-primary mb-2">Add Flavor</button>
-    <input id="new_flavor" class="form-control" type="text" name="" placeholder="Chocolate">
+    <div class="mb-3">
+      <button id="add_flavor" type="button" class="btn btn-primary btn-sm mb-2">Add Flavor</button>
+      <input id="new_flavor" class="form-control" type="text" name="" placeholder="Chocolate">
+    </div>
+
     <div id="Flavors">
       <%_ for (flavor of icecream.flavors) { -%>
-          <div class="form-group mb-2">
-            <input readonly class="form-control-plaintext" type="text" name="flavors" value="<%= flavor -%>">
+          <div class="form-group mb-3">
+            <input readonly class="form-control-plaintext mb-1" type="text" name="flavors" value="<%= flavor -%>">
             <button class="btn btn-sm btn-warning">Delete Flavor</button>
           </div>
       <%_ } -%>
@@ -19,11 +22,13 @@
 
 
     <h4 class="mt-2 mb-2">Fillings</h4>
-      <button id="add_filling" type="button" class="btn btn-primary mb-2">Add Filling</button>
-      <input id="new_filling" class="form-control" type="text" name="" placeholder="Chocolate">
+      <div class="mb-3">
+        <button id="add_filling" type="button" class="btn btn-primary btn-small mb-2">Add Filling</button>
+        <input id="new_filling" class="form-control" type="text" name="" placeholder="Chocolate">
+      </div>
       <div id="Fillings">
           <%_ for (filling of icecream.fillings) { -%>
-                <div class="form-group mb-2">
+                <div class="form-group mb-3">
                   <input readonly class="form-control-plaintext" type="text" name="fillings" value="<%= filling -%>">
                   <button class="btn btn-sm btn-warning">Delete Filling</button>
                 </div>
@@ -33,5 +38,5 @@
      </div>
 
   <button type="submit" class="btn btn-primary ml-2 mb-2 mt-2">Save</button>
-  <button id="delete" class="btn btn-primary m-2">Delete</button>
+  <button id="delete" class="btn btn-warning m-2">Delete</button>
 </form>
