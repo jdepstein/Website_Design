@@ -37,7 +37,7 @@
       const val = document.getElementById('new_filling').value;
       $('#Fillings').append(`
 
-        <div>
+        <div class="form-group mb-2">
          <input readonly class="form-control-plaintext" type="text" name="fillings" value="${val}">
          <button class="btn btn-sm btn-warning">Delete Filling</button>
         </div>`)
@@ -52,7 +52,7 @@
       event.preventDefault();
       const val = document.getElementById('new_flavor').value;
         $('#Flavors').append(`
-        <div>
+        <div class="form-group mb-2">
           <input readonly class="form-control-plaintext" type="text" name="flavors" value="${val}">
           <button class="btn btn-sm btn-warning">Delete Falvor</button>
         </div>`)
