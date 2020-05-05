@@ -18,7 +18,7 @@ const icecreams = [
   new IceCream({_id: "Fairy Floss", flavors:["Cotton Candy"], fillings:["Sprinkles"], description:"Your favorite county fair treat now available 24/7", image: "https://easyfamilyrecipeideas.com/wp-content/uploads/2019/07/Cotton-Candy-Ice-Cream-10-683x1024.jpg"}),
   new IceCream({_id: "sPEACHless", flavors:["Peach"], fillings:[], description:"Your favorite fruit now in frozen form will leave you sPEACHless", image: "https://shewearsmanyhats.com/wp-content/uploads/2014/07/peach-ice-cream-3-480x480.jpg"}),
   new IceCream({_id: "When It Rains It S'mores",flavors:["Vanilla"], fillings:["Graham crackers", "Marshmallow fluff", "Chocolate fudge"], description:"Delicious campfire smore's brought to you without the fire", image: "https://howtofeedaloon.com/wp-content/uploads/2015/06/Ice-Cream-9.jpg"}),
-  new IceCream({_id: "Won't Fudge", flavors:["Chocolate"], fillings:["Chocolate Fudge"], description:"This chocolate overload won't fudge your chocolate cravings", image: "https://www.cravingsofalunatic.com/wp-content/uploads/2012/10/Chocolate-Fudge-Brownie-Ice-Cream-for-Sunday-Supper-4.jpg"}),
+  new IceCream({_id: "Wont Fudge", flavors:["Chocolate"], fillings:["Chocolate Fudge"], description:"This chocolate overload won't fudge your chocolate cravings", image: "https://www.cravingsofalunatic.com/wp-content/uploads/2012/10/Chocolate-Fudge-Brownie-Ice-Cream-for-Sunday-Supper-4.jpg"}),
   new IceCream({_id: "Sundae Fundae", flavors:["Vanilla", "Chocolate"], fillings:["Caramel", "Chocolate Fudge", "Cookie Bits", "Cherries"], description:"Name after the our store Sundea Fundea is what all other icecreams strive for", image: "https://4.bp.blogspot.com/-o52BONHOA08/UfF-Mrw8sMI/AAAAAAAAFPI/tzvZm1A9X18/s1600/Hot-Fudge-Sundae.jpg"})
 
 ];
