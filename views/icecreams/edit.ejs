@@ -6,10 +6,8 @@
     <input class="form-control mb-1" type="text" name="image" placeholder="<%= icecream.image -%>" value="<%= icecream.image-%>">
 
   <h4>Flavors</h4>
-  <div>
     <button id="add_flavor" type="button" class="btn btn-primary mb-2">Add Flavor</button>
     <input id="new_flavor" class="form-control" type="text" name="" placeholder="Chocolate">
-  </div>
     <div id="Flavors">
       <%_ for (flavor of icecream.flavors) { -%>
           <div class="form-group mb-2">
@@ -21,7 +19,8 @@
 
 
     <h4 class="mt-2 mb-2">Fillings</h4>
-      <button id="add_filling" type="button" class="btn btn-primary mb-2">Add Filling</button>
+      <button id="add_filling" type="button" class="btn btn-primary mb-2">Add Flavor</button>
+      <input id="new_filling" class="form-control" type="text" name="" placeholder="Chocolate">
       <div id="Fillings">
           <%_ for (filling of icecream.fillings) { -%>
                 <div class="form-group mb-2">

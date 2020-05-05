@@ -34,10 +34,11 @@
 
   $('#add_filling').on('click', function(event){
       event.preventDefault();
+      const val = document.getElementById('new_filling').value;
       $('#Fillings').append(`
 
         <div class="input-group mb-2">
-          <input type="text" name="fillings" placeholder="" value="" class="form-control form-control-lg font-weight-bold">
+        <input readonly class="form-control-plaintext" type="text" name="fillings" value="${val}">
           <button class="btn btn-sm btn-warning">Delete Filling</button>
         </div>`)
 
