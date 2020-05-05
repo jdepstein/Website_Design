@@ -1,14 +1,21 @@
+<div class="row container-fluid">
+  <main class="col-md-8 ml-3">
+    <img src=<%=icecream.image-%> class="img-fluid rounded mx-auto d-block" alt="Responsive image"  width="500" height="250">
+  </main>
 
-<h2><%= icecream._id -%></h2>
-<p>Description: <%= icecream.description -%></p>
-<p>Main flavor: <%= icecream.flavors -%></p>
+  <main class="col-md-3 ml-3">
+    <h2><%= icecream._id -%></h2>
+    <p>Description: <%= icecream.description -%></p>
+    <p>Main flavor: <%= icecream.flavors -%></p>
 
-<%_ if (icecream.fillings.length > 0) { -%>
-  <p>Fillings:
-    <ul>
-  <%_ for (const fill of icecream.fillings) { -%>
-        <li><a><%= fill -%></a></li>
-  <%_ } -%>
-  </ul>
-<%_ } -%></p>
-<img src=<%=icecream.image-%> class="img-fluid rounded mx-auto d-block" alt="Responsive image"  width="500" height="250">
+
+    <%_ if (icecream.fillings.length > 0) { -%>
+      <p>Fillings:
+        <ul>
+      <%_ for (const fill of icecream.fillings) { -%>
+            <li><a><%= fill -%></a></li>
+      <%_ } -%>
+      </ul>
+    <%_ } -%></p>
+  </main>
+</div>
