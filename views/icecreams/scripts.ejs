@@ -49,7 +49,7 @@
     });
 
     $('#add_flavor').on('click', function(event){
-      var val = $(this).closest('input').value;
+      const val = $(this).closest('input').value;
         event.preventDefault();
         $('#Flavors').append(`
         <div class="form-group mb-2">
