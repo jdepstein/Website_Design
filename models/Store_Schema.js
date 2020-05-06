@@ -10,5 +10,13 @@ const Store = new mongoose.Schema({
   icecream:[{type: String, required: true, trim: true}]
 });
 
+// Clean up icecreams when a store is deleted
+Store.post('findOneAndDelete', function(icecream) {
+  const queries = [
+    mongoose.model('Store').deleteMany({icecream: icecream.id})
+  ];
+  Promise.all(queries).catch(error => next(error));
+});
+
 // Export the model
 module.exports = mongoose.model('Store', Store);
