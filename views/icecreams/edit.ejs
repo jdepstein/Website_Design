@@ -2,7 +2,7 @@
 
 <div class="mb-3">
   <h4>Description</h4>
-    <textarea class="form-control mb-1" name="description" placeholder="Description" rows="3"><%= icecream.description -%></textarea>
+    <textarea class="form-control mb-1" name="description" placeholder="<%= icecream.description-%>" rows="3"><%= icecream.description -%></textarea>
 </div>
 
   <div class="mb-3">
@@ -13,7 +13,7 @@
   <h4>Flavors</h4>
     <div class="mb-3">
       <button id="add_flavor" type="button" class="btn btn-primary btn-sm mb-2">Add Flavor</button>
-      <input id="new_flavor" class="form-control" type="text" name="" placeholder="Chocolate">
+      <input id="new_flavor" class="form-control" type="text" name="" placeholder="<%= icecream.flavors-%>">
     </div>
 
     <div id="Flavors">
@@ -29,7 +29,7 @@
 
       <div class="mb-3">
         <button id="add_filling" type="button" class="btn btn-primary btn-sm mb-2">Add Filling</button>
-        <input id="new_filling" class="form-control" type="text" name="" placeholder="Chocolate">
+        <input id="new_filling" class="form-control" type="text" name="" placeholder="<%= icecream.fillings-%>">
       </div>
 
       <div id="Fillings">
