@@ -33,13 +33,10 @@
 
   $('.add_flavor').on('click', function(event) {
     event.preventDefault();
-    const x =   $(this).closest('select')
-    const t = $(x).closest('option')
-    console.log(x);
-    console.log(t);
-    $(this).closest('ul').append(`
+    const x =  $(this).prev().val()
+    $(this).closest('form').find('ul').append(`
     <div>
-    <li><input readonly class="form-control-plaintext" name="icecream" value="icecream"></input> </li>
+    <li><input readonly class="form-control-plaintext" name="icecream" value=${x}></input> </li>
       <button class="bg-warning mb-3 delete_flav">Delete Flavor</button>
     </div>`)
   });
