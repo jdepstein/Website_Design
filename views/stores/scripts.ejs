@@ -1,11 +1,6 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
 
-  // Highlight changes in form inputs
-  $(document).on('input', '.form-control', function(event) {
-    $(this).addClass('bg-dark text-white');
-  });
-
   $('.new_store').on('submit', function(event) {
     const form = $(this);
     event.preventDefault();
@@ -26,9 +21,11 @@
   $('.currstore').on('click','.delete_store', function(event) {
     const form = $(this).closest('form')
     event.preventDefault();
-    $.ajax({method: 'delete', url: `/stores/${form.attr("id")}`})
-      .done(() => window.location.replace('/stores'))
-      .fail(error => alert(error.responseText));
+    if (confirm('Delete all traces of this store from project-camdakotajosh?')) {
+      $.ajax({method: 'delete', url: `/stores/${form.attr("id")}`})
+        .done(() => window.location.replace('/stores'))
+        .fail(error => alert(error.responseText));
+    }
   });
 
   $('.add_flavor').on('click', function(event) {

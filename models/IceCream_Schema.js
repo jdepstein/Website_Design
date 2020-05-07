@@ -8,14 +8,12 @@ const IceCream = new mongoose.Schema({
   image: {type:String,  trim: true}
 });
 
-// Clean up sections and prereqs when a course is deleted
+// Clean up icecreams when a store is deleted
 IceCream.post('findOneAndDelete', function(icecream) {
   const queries = [
     mongoose.model('Store').updateMany({icecream: icecream.id}, {$pull: {icecream: icecream.id}})
   ];
   Promise.all(queries).catch(error => next(error));
 });
-
-
 
 module.exports = mongoose.model('IceCream', IceCream);
