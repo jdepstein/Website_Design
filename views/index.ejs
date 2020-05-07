@@ -9,9 +9,9 @@
   </header>
   <main>
     <%_ if (admin) { -%>
-       <%- include('./browse', {stores: stores, order: order, IceCreamNames: IceCreamNames}); -%>
+       <%- include('./browse'); -%>
       <%_ } else { -%>
-       <%- include('./browse', {stores: stores, order: order}); -%>
+       <%- include('./browse'); -%>
       <%_ } -%>
   </main>
 </html>
