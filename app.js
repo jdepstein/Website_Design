@@ -42,11 +42,6 @@ app.use(function(request, response, next) {
   next();
 });
 
-// Redirect from the home page
-app.get('/', function(request, response) {
-  response.render('index');
-});
-
 // Enter admin mode and return to the previous page
 app.get('/login', function(request, response) {
   request.session.admin = true;
@@ -65,6 +60,10 @@ app.use(function(request, response, next) {
   next();
 });
 
+// Redirect from the home page
+app.get('/', function(request, response) {
+  response.render('index');
+});
 
 // Route content requests
 app.use('/', router);
