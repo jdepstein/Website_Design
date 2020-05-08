@@ -18,7 +18,6 @@
                  <input class="form-control" type="text" name="state" placeholder="<%= store.state-%>" value="<%= store.state-%>">
               </p>
 
-                <%_ if (store.icecream.length > 0) { -%>
                     <p>Flavors In Stock:</p>
                     <ul>
                       <%_ for (const flav of store.icecream) { -%>
@@ -28,7 +27,6 @@
                         </div>
                       <%_ } -%>
                     </ul>
-                <%_ } -%>
 
               <div>
                 <select>
